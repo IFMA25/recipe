@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giallo Zafferano</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header lock-padding">
+            <div class="header__inner">
+                <div class="header__menu">
+                    <span class="header__menu-item"></span>
+                </div>
+                <div class="substrate"></div>
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a href="./index.html" class="header__nav-link">
+                                <img class="header__nav-img" src="./img/icon-home.svg" width="34" height="34" alt="icon home">
+                                Home
+                            </a>
+                        </li>
+                        <li class="header__nav-item">
+                            <span class="header__nav-text">
+                                <img class="header__nav-img img-other" src="./img/icon-other.svg" width="34" height="34" alt="icon home">
+                                Recipes</span>
+                            <ul class="header__sub-list">
+                                <li class="header__sub-item">
+                                    <a class="header__sub-link" href="">Appetizers</a>
+                                </li>
+                                <li class="header__sub-item">
+                                    <a class="header__sub-link" href="">First Courses</a>
+                                </li>
+                                <li class="header__sub-item">
+                                    <a class="header__sub-link" href="">Main Courses</a>
+                                </li>
+                                <li class="header__sub-item">
+                                    <a class="header__sub-link" href="">Desserts</a>
+                                </li>
+                                <li class="header__sub-item">
+                                    <a class="header__sub-link" href="">Leavened Products</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="./index.html" class="header__nav-link">
+                                <img class="header__nav-img" src="./img/icon-ultime.svg" width="34" height="34" alt="icon home">
+                                Latest Recipes
+                            </a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="./index.html" class="header__nav-link">
+                                <img class="header__nav-img img-other" src="./img/icon-other.svg" width="34" height="34" alt="icon home">
+                                IT Website
+                            </a>
+                        </li>
+                        <div class="menu__btn">
+                            <a class="btn header__btn-link link menu__btn-link" href="#popup-login">
+                                Sign in
+                                <img src="./img/icon-accedi.svg" width="40" height="40" alt="sign in">
+                            </a>
+                        </div>
+                    </ul>
+                </nav>
+                <div class="header__logo">
+                <img width="168" height="44" src="./img/logo.svg" alt="logo">
+                </div>
+            </div>
+            <div class="header__search">
+                <div class="search-form">
+                    <input type="text" class="search-form__item" value placeholder="Search for a recipe">
+                    <input type="submit" value class="search-form__submit">
+                </div>
+            </div>
+            <div class="search__mobile">
+                <button class="search__mobile-btn"></button>
+            </div>
+            <div class="header__btn">
+                <a class="btn header__btn-link link" href="#popup-login">
+                    Sign in
+                    <img src="./img/icon-accedi.svg" width="40" height="40" alt="sign in">
+                </a>
+            </div>
+        </header>
+        <main class="main">
+            <div class="container main__container">
+
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+    <div class="popup" id="popup-login">
+        <div class="popup__wrapper">
+            <div class="popup__body">
+                <div class="popup__close">
+                    <span class="popup__close-item"></span>
+                </div>
+                <div class="popup__content">
+                    <div class="popup__title">Log in to this site</div>
+                    <div class="popup__btn"><a href="#popup-register" class="link popup__link" data-modal>
+                        Register</a>
+                    </div>
+                </div>
+                <div class="popup__subtitel">Sign in to your account</div>
+                <form name="signin" action="#" method="post">
+                    <div class="signin__form">
+                        <label class="signin__form-label" for="login"> Your Email
+                        <input class="signin__form-input" type="text" required>
+                        </label>
+                    </div>
+                    <div class="signin__form">
+                        <label class="signin__form-label signin__password-show" for="password"> Your password
+                        <input class="signin__form-input signin__password-input" type="password" id="pass-login" required suggested: "current-password">
+                        <div class="signin__password-btn " data-target="#pass-login">
+                            <img src="./img/pass-show.svg" alt="password show">
+                        </div>
+                    </label>
+                    </div>
+                    <div class="signin__content">
+                        <div class="signin__check">
+                            <label class="signin__check-label">
+                                <input class="signin__check-input" type="checkbox">
+                                <span class="signin__check-login">Remember me</span>
+                            </label>
+                        </div>
+                        <div class="signin__remind">
+                            <a href="#" class="signin__remind-link">Forgot your password?</a>
+                        </div>
+                    </div>
+                    <div class="signin__submit">
+                        <input type="submit" value="Log in" class="btn signin__submit-btn">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup-register">
+        <div class="popup__wrapper">
+            <div class="popup__body">
+                <div class="popup__close">
+                    <span class="popup__close-item"></span>
+                </div>
+                <div class="popup__content">
+                    <div class="popup__title">Register on this website</div>
+                    <div class="popup__btn">
+                        <a href="#popup-login" class="link popup__link" data-modal>
+                            Sing in
+                        </a>
+                    </div>
+                </div>
+                <div class="popup__subtitel">Complete your account registration</div>
+                <form name="signin" action="#" method="post">
+                    <div class="signin__form">
+                        <label class="signin__form-label" for="login"> You are registering with email*
+                        <input class="signin__form-input" type="text" required>
+                        </label>
+                    </div>
+                    <div class="signin__form">
+                        <label class="signin__form-label signin__password-show" for="password">Enter password*
+                        <input class="signin__form-input signin__password-input" id="pass-submit" type="password" required suggested: "current-password">
+                        <div class="signin__password-btn" data-target="#pass-submit">
+                            <img src="./img/pass-show.svg" alt="password show">
+                        </div>
+                        </label>
+                    </div>
+                    <div class="signin__form">
+                        <label class="signin__form-label signin__password-show" for="password">Confirm password*
+                        <input class="signin__form-input signin__password-input" id="pass-confirm" type="password" required suggested: "current-password">
+                        <div class="signin__password-btn" data-target="#pass-confirm">
+                            <img src="./img/pass-show.svg" alt="password show">
+                        </div>
+                        </label>
+                    </div>
+                    <div class="signin__content">
+                        <div class="signin__check">
+                            <label class="signin__check-label signin__form-label">Terms of Use*
+                                <input class="signin__check-input" type="checkbox">
+                                <span class="signin__check-register">I declare that I have read the <a class="signin__check-link" href="#">Terms and Conditions of Use</a> of <br> the site</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="signin__submit">
+                        <input type="submit" value="Register" class="btn signin__register-btn">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
