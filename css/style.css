@@ -440,7 +440,7 @@ template {
   text-align: center;
 }
 .btn:hover {
-  box-shadow: 0px 0px 5px 5px rgba(255, 150, 20, 0.2);
+  box-shadow: 0px 0px 5px 6px rgba(255, 150, 20, 0.2);
   color: #fff;
 }
 
@@ -670,7 +670,7 @@ template {
   right: 5px;
   border: 0;
   border-radius: 30px;
-  background: rgba(155, 92, 183, 0.1) url(../../img/search-submit.svg) no-repeat center/contain;
+  background: rgba(155, 92, 183, 0.1) url(../img/search-submit.svg) no-repeat center/contain;
   width: 64px;
   height: 34px;
 }
@@ -1007,7 +1007,7 @@ template {
   .search__mobile-btn {
     border: 0;
     border-radius: 30px;
-    background: rgba(155, 92, 183, 0.1) url(../../img/search-submit.svg) no-repeat center/contain;
+    background: rgba(155, 92, 183, 0.1) url(../img/search-submit.svg) no-repeat center/contain;
     width: 64px;
     height: 34px;
   }
