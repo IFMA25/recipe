@@ -170,16 +170,16 @@ function bodyUnLock() {
 
 
 /*-----------SWIPER SLIDER---------------------*/
-new Swiper('.slide-card',{
+new Swiper('.slider',{
     direction: 'horizontal',
     loop: true,
     slidesPerView: 'auto',
-    spaceBetween: 21,
-    breakpoints:{
-      380:{
-        slidesPerView: 'auto',
-        spaceBetween: 32,
-      }
+    spaceBetween: 30,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    speed: 800,
+    freeMode: true,
 
-    }
 });
