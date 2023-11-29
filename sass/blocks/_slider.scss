@@ -10,14 +10,15 @@
         overflow: hidden;
 
     }
+    &__small-slide{
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
     &__slide{
         max-width: 1137px;
-        display: grid;
-        grid-template-areas:
-        "item-1 item-3"
-        "item-2 item-3";
-        grid-row-gap: 30px;
-        grid-column-gap: 30px;
+        display: flex;
+        column-gap: 30px;
         &-item{
             position: relative;
             overflow: hidden;
@@ -59,17 +60,14 @@
 .item-1{
     max-width: 360px;
     max-height: 235px;
-    grid-area: item-1;
 }
 .item-2{
     max-width: 360px;
     max-height: 235px;
-    grid-area: item-2;
 }
 .item-3{
     max-width: 750px;
-    height: 500px;
-    grid-area: item-3;
+    max-height: 500px;
     & .swiper__slide-text{
         font-size: 44px;
         line-height: 50px;
