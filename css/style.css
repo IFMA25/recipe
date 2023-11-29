@@ -521,23 +521,14 @@ template {
   list-style: none;
   border-top: 1px rgba(78, 57, 105, 0.15) solid;
   transition: all 0.3s ease;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 .header__nav-item:last-child {
   border-bottom: 1px rgba(78, 57, 105, 0.15) solid;
 }
 .header__nav-item:hover {
   background-color: #F7F6F8;
-}
-.header__nav-item:hover .img-other {
-  transform: rotate(90deg);
-  transition: transform 0.4s ease;
-}
-.header__nav-item--open:hover {
-  padding-bottom: 17px;
-}
-.header__nav-item--open:hover .header__sub-list {
-  display: block;
-  visibility: visible;
 }
 .header__nav-link {
   display: inline-block;
@@ -550,30 +541,49 @@ template {
   padding-left: 25px;
 }
 .header__nav-link img {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-right: 5px;
+  margin-top: -3px;
 }
 .header__nav-link:hover {
   color: #4E3969;
 }
-.header__nav-text {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.4285714286;
-  color: #4E3969;
-  padding-left: 25px;
+.header__sub-nav {
+  position: relative;
 }
-.header__nav-text img {
-  padding-top: 10px;
-  padding-bottom: 10px;
+.header__sub-nav--close .header__sub-list {
+  display: none;
+}
+.header__sub-nav--close .header__sub-arrow--close {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
+}
+.header__sub-arrow {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 20px;
+  right: 0;
+  top: 15px;
+  border: none;
+  background-color: transparent;
+}
+.header__sub-arrow::before {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: 2px #4E3969 solid;
+  border-right: 2px #4E3969 solid;
+  border-radius: 2px;
+  transform: rotate(-45deg);
+  top: calc(50% - 2px);
+  right: calc(50% - 4px);
 }
 .header__sub-list {
-  display: none;
   padding-left: 20px;
   border-left: 2px #FF9614 solid;
   border-radius: 1px;
   margin-left: 40px;
+  margin-top: 10px;
 }
 .header__sub-item {
   list-style: none;
@@ -605,17 +615,6 @@ template {
 .header__btn-link {
   padding: 11px 5px 11px 14px;
   border-radius: 20px;
-}
-
-.menu__btn {
-  display: none;
-  width: 100%;
-}
-.menu__btn-link {
-  display: block;
-  margin-left: 25px;
-  margin-right: 25px;
-  padding: 0;
 }
 
 .header__menu--open .header__menu-item::after {
@@ -1034,22 +1033,33 @@ template {
 @media (max-width: 550px) {
   .header {
     padding: 10px 15px;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
   }
-  .header__search {
-    display: none;
+  .header__menu {
+    margin: 0;
+  }
+  .header__btn-link {
     padding: 0;
   }
-  .header__btn {
+  .header__btn-link span {
     display: none;
   }
-  .menu__btn {
-    display: block;
-  }
-  .search-form {
-    display: block;
+  .header__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #FF9614;
+    width: calc(40px + 38 * (100vw - 320px) / 230);
+    height: 42px;
   }
   .search__mobile {
+    width: calc(40px + 38 * (100vw - 320px) / 230);
     margin-right: 0;
+  }
+  .search__mobile-btn {
+    width: calc(30px + 38 * (100vw - 320px) / 230);
   }
   .popup__btn {
     position: absolute;
@@ -1069,15 +1079,29 @@ template {
     padding-bottom: 90px;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 440px) {
+  .header__search {
+    display: none;
+  }
+  .search-form {
+    display: block;
+  }
+  .header__logo {
+    width: calc(130px + 38 * (100vw - 320px) / 120);
+  }
+  .header__logo img {
+    height: 100%;
+  }
+}
+@media (max-width: 340px) {
   .search__mobile {
-    width: 44px;
-    border-radius: 50%;
-    margin-left: 15px;
+    height: 40px;
   }
   .search__mobile-btn {
-    width: 34px;
-    border-radius: 50%;
+    height: 30px;
+  }
+  .header-btn {
+    height: 40px;
   }
 }
 .main {
@@ -1093,12 +1117,16 @@ template {
   width: 100%;
   overflow: hidden;
 }
+.slider__small-slide {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
 .slider__slide {
   max-width: 1137px;
-  display: grid;
-  grid-template-areas: "item-1 item-3" "item-2 item-3";
-  grid-row-gap: 30px;
-  grid-column-gap: 30px;
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
 .slider__slide-item {
   position: relative;
@@ -1139,19 +1167,16 @@ template {
 .item-1 {
   max-width: 360px;
   max-height: 235px;
-  grid-area: item-1;
 }
 
 .item-2 {
   max-width: 360px;
   max-height: 235px;
-  grid-area: item-2;
 }
 
 .item-3 {
   max-width: 750px;
-  height: 500px;
-  grid-area: item-3;
+  max-height: 500px;
 }
 .item-3 .swiper__slide-text {
   font-size: 44px;

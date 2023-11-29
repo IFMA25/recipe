@@ -3,31 +3,28 @@
 
 const menuIcon = document.querySelector('.header__menu');
 const containerNavigation = document.querySelector('.header__nav');
-const subMenu = document.querySelector('.header__sub-list');
-const navItem = subMenu.parentElement;
+const subMenu = document.querySelector('.header__sub-nav');
+const subMenuIcon = document.querySelector('.header__sub-arrow');
 
 document.addEventListener("DOMContentLoaded", function(){
     menuIcon.addEventListener("click", function(){
         document.body.classList.toggle('body--lock');
         menuIcon.classList.toggle('header__menu--open');
         containerNavigation.classList.toggle('header__nav--open');
-        navItem.classList.toggle('header__nav-item--open');
     });
 
-    navItem.addEventListener("click", function(event) {
+    subMenuIcon.addEventListener("click", function(){
         event.stopPropagation();
-        navItem.classList.toggle('header__nav-item--open');
-    });
+        subMenuIcon.classList.toggle('header__sub-arrow--close');
+        subMenu.classList.toggle('header__sub-nav--close');
+    })
 
     document.addEventListener("click", function(event) {
         const isClickInsideMenu = containerNavigation.contains(event.target) || menuIcon.contains(event.target);
-        const isNavItemOpen = navItem.classList.contains('header__nav-item--open');
-
-        if (!isClickInsideMenu && isNavItemOpen) {
+        if (!isClickInsideMenu) {
             document.body.classList.remove('body--lock');
             menuIcon.classList.remove('header__menu--open');
             containerNavigation.classList.remove('header__nav--open');
-            navItem.classList.remove('header__nav-item--open');
         }
     });
 });

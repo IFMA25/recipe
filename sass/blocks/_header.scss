@@ -73,22 +73,13 @@
         list-style: none;
         border-top: 1px rgba(78, 57, 105, 0.15) solid;
         transition: all 0.3s ease;
+        padding-bottom: 10px;
+        padding-top: 10px;
         &:last-child{
             border-bottom: 1px rgba(78, 57, 105, 0.15) solid;
         }
         &:hover{
             background-color: $body-bg;
-        }
-        &:hover .img-other{
-            transform: rotate(90deg);
-            transition: transform 0.4s ease;
-        }
-        &--open:hover{
-            padding-bottom: 17px;
-        }
-        &--open:hover .header__sub-list{
-            display: block;
-            visibility: visible;
         }
     }
     &__nav-link{
@@ -101,31 +92,50 @@
         color: $violet;
         padding-left: 25px;
         & img{
-            padding-top: 10px;
-            padding-bottom: 10px;
-            margin-right: 5px;
+            margin-top: -3px;
         }
         &:hover{
             color: $violet;
         }
     }
-    &__nav-text{
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 1.428571428571429;
-        color: $violet;
-        padding-left: 25px;
-        & img{
-            padding-top: 10px;
-            padding-bottom: 10px;
+    &__sub-nav{
+        position: relative;
+        &--close .header__sub-list{
+            display: none;
+        }
+        &--close .header__sub-arrow--close{
+            transform: rotate(180deg);
+            transition: transform 0.2s ease;
+        }
+    }
+    &__sub-arrow{
+        position: absolute;
+        content: '';
+        width: 50px;
+        height: 20px;
+        right: 0;
+        top: 15px;
+        border: none;
+        background-color: transparent;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 7px;
+            height: 7px;
+            border-top: 2px $violet solid;
+            border-right: 2px $violet solid;
+            border-radius: 2px;
+            transform: rotate(-45deg);
+            top: calc(50% - 2px);
+            right: calc(50% - 4px);
         }
     }
     &__sub-list{
-        display: none;
         padding-left: 20px;
         border-left: 2px $orange solid;
         border-radius: 1px;
         margin-left: 40px;
+        margin-top: 10px;
     }
     &__sub-item{
         list-style: none;
@@ -161,16 +171,6 @@
         }
     }
 }
-.menu__btn{
-    display: none;
-    width: 100%;
-    &-link{
-        display: block;
-        margin-left: 25px;
-        margin-right: 25px;
-        padding: 0;
-    }
-}
 .header__menu--open .header__menu-item::after{
     top: calc(50% - 1px);
     transform:  rotate(-90deg);
@@ -203,8 +203,6 @@
         background-color: transparent;
         padding: 12px 0 12px 20px;
         &::placeholder{
-
-            
             color: $desc-color;
         }
     }
