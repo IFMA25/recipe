@@ -227,9 +227,10 @@
     left: 15px;
     content: '';
     width: calc(100% - 30px);
-    height: auto;
+    height: calc(100% - 20px);
     z-index: 1000;
     background-color: #fff;
+    padding: 0;
     }
 
 .header__search--open .search__mobile{
