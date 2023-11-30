@@ -63,7 +63,9 @@
                     </ul>
                 </nav>
                 <div class="header__logo">
-                <img width="168" height="44" src="./img/logo.svg" alt="logo">
+                    <a href="./index.html" class="header__logo-libk">
+                        <img width="168" height="44" src="./img/logo.svg" alt="logo">
+                    </a>
                 </div>
             </div>
             <div class="header__search">
@@ -77,7 +79,7 @@
             </div>
             <div class="header__btn">
                 <a class="btn header__btn-link link" href="#popup-login">
-                    <span>Sign in</span> 
+                    <span>Sign in</span>
                     <img src="./img/icon-accedi.svg" width="40" height="40" alt="sign in">
                 </a>
             </div>
@@ -182,9 +184,128 @@
                 </div>
 
             </div>
-            <div class="container main__container">
+            <nav class="navigation">
+                <div class="container navigation__container">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">Latest Recipes</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">Appetizers</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">First Courses</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">Main Courses</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">Desserts</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">Leavened Products</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+                <div class="container want__container">
+                    <section class="want">
+                        <div class="want__title section-title">I want to</div>
+                        <div class="want__content">
+                            <div class="want__inner">
+                                <div class="want__title-list">
+                                    <a href="#" class="want__title-link">Antipasti</a>
+                                </div>
+                                <ul class="want__list">
+                                    <li class="want__item">
+                                        <a href="" class="want__link">Antipasti veloci</a>
+                                    </li>
+                                    <li class="want__item">
+                                        <a href="" class="want__link">Pasta</a>
+                                    </li>
+                                    <li class="want__item">
+                                        <a href="" class="want__link">Pesce</a>
+                                    </li>
+                                    <li class="want__item">
+                                        <a href="" class="want__link">Dolci veloci</a>
+                                    </li>
+                                    <li class="want__item">
+                                        <a href="" class="want__link">Secondi vegetariani</a>
+                                    </li>
+                                    <li class="want__item">
+                                        <a href="" class="want__link">Ricette al forno</a>
+                                    </li>
+                                    <li class="want__item">
+                                        <a href="" class="want__link">Fritti</a>
+                                    </li>
 
-            </div>
+                                </ul>
+                            </div>
+                            <div class="want__inner">
+                                <div class="want__title-list">
+                                    <a href="#" class="want__title-link">Primi</a>
+                                </div>
+                                <ul class="want__list">
+                                    <li class="want__item">
+                                        <a href="" class="want__link">Pasta fresca</a>
+                                    </li>
+                                    <li class="want__item">
+                                        <a href="" class="want__link">Facili e veloci</a>
+                                    </li>
+                                    <li class="want__item">
+                                        <a href="" class="want__link">Biscotti</a>
+                                    </li>
+                                    <li class="want__item">
+                                        <a href="" class="want__link">Finger food</a>
+                                    </li>
+                                    <li class="want__item">
+                                        <a href="" class="want__link">Paste sfiziose</a>
+                                    </li>
+                                    <li class="want__item">
+                                        <a href="" class="want__link">Gnocchi</a>
+                                    </li>
+                                    <li class="want__item">
+                                        <a href="" class="want__link">Marmellate</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="want__inner">
+                                <div class="want__title-list">
+                                    <a href="#" class="want__title-link">Secondi</a>
+                                </div>
+                                <ul class="want__list">
+                                    <li class="want__item">
+                                        <a href="" class="want__link">Antipasti veloci</a>
+                                    </li>
+                                    <li class="want__item">
+                                        <a href="" class="want__link">Pasta</a>
+                                    </li>
+                                    <li class="want__item">
+                                        <a href="" class="want__link">Grandi classici</a>
+                                    </li>
+                                    <li class="want__item">
+                                        <a href="" class="want__link">Dolci veloci</a>
+                                    </li>
+                                    <li class="want__item">
+                                        <a href="" class="want__link">Secondi vegetariani</a>
+                                    </li>
+                                    <li class="want__item">
+                                        <a href="" class="want__link">Ricette al forno</a>
+                                    </li>
+                                    <li class="want__item">
+                                        <a href="" class="want__link">Piatti unici</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="popular">
+                        <div class="popular__title section-title">Most popular</div>
+
+                    </section>
+                </div>
         </main>
         <footer class="footer"></footer>
     </div>
@@ -194,12 +315,10 @@
                 <div class="popup__close">
                     <span class="popup__close-item"></span>
                 </div>
-                
                     <div class="popup__title">Log in to this site</div>
                     <div class="popup__btn-reg"><a href="#popup-register" class="link popup__link-reg" data-modal>
                         Register</a>
                     </div>
-                
                 <div class="popup__subtitel">Sign in to your account</div>
                 <form class="signin" name="signin" action="#" method="post">
                     <div class="signin__form">

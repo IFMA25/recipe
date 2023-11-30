@@ -14,12 +14,15 @@
     }
 .container {
     width: 100%;
-    max-width: 1960px;
+    max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 30px;
     padding-left: 30px;
     }
+.main{
+    min-width: 0;
+}
 .text {
     font-size: 16px;
     font-style: normal;
@@ -27,10 +30,23 @@
     line-height: 1.75;
     color: $text-color;
 }
-.title{
+.section-title{
+    position: relative;
     font-size: 26px;
     font-style: normal;
     font-weight: 500;
     line-height: 1.15;
     color: $text-color;
+    text-transform: uppercase;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 3px;
+            background-color: $orange;
+            bottom: -7px;
+            left: 0;
+            border-radius: 2px;
+        }
+    
 }
