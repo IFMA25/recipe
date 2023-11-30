@@ -219,6 +219,9 @@
 }
 .search__mobile{
     display: none;
+    &:hover{
+        box-shadow: 0px 0px 5px 6px rgba(233, 229, 238, 0.4);
+    }
 }
 .header__search--open .header__search{
     display: block;

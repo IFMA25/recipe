@@ -1,3 +1,4 @@
+
 @media (max-width:768px){
     .search-form{
         display: none;
@@ -26,6 +27,22 @@
     .signin__check-register br{
         display: none;
     }
+    .slider__slide .slider__small-slide{
+            flex-direction: row;
+            
+       }
+    
+    .slider__small-slide .item-1, .slider__small-slide .item-2, .slider__slide .item-3{
+        max-width: calc(100% / 2);
+        max-height: auto;
+    }
+    .slider__slide .item-3{
+        max-width: calc(100% / 3 - 30px);
+        max-height: auto;
+    }
+    .slider__slide .item-3 .slider__slide-text{
+        @include adaptiv-value('font-size', 30, 20, 1);
+    }
 }
 @media (max-width:615px){
     .popup__body{
@@ -43,6 +60,7 @@
             margin: 0;
         }
         &__btn-link{
+            width: 100%;
             padding: 0;
         }
         &__btn-link span{
@@ -65,22 +83,24 @@
             width: calc(30px + 38 * ((100vw - 320px) / 230));
         }
     }
-    .popup__btn{
-        position: absolute;
-        bottom: 25px;
-        left: 40px;
-        content: '';
-        width: 100%;
-        height: auto;
-        padding: 18px 80px;
-    }
-    .popup__link{
-        padding: 15px 84px;
-    }
     .popup__body{
         position: relative;
         padding-top: 40px;
-        padding-bottom: 90px;
+        padding-bottom: 60px;
+        grid-template-areas:
+            "popup__title popup__title"
+            "popup__subtitle popup__subtitle"
+            "form-signin form-signin"
+            "popup__btn-reg popup__btn-reg";
+    }
+    .popup__btn-reg{
+        padding-top: 30px;
+        justify-self: center;
+    }
+    .popup__link-reg{
+        padding: 17px 77px;
+        font-size: 15px;
+        line-height: 1.5;
     }
 }
 @media (max-width:440px){
@@ -96,6 +116,19 @@
     .header__logo img{
         height: 100%;
     }
+    .signin{
+        &__check{
+            margin-bottom: 10px;
+        }
+        &__check-register{
+            margin-top: 3px;
+            margin-bottom: 10px;
+        }
+        &__remind{
+            margin-bottom: 20px;
+        }
+
+    }
 
 
 }
@@ -108,6 +141,10 @@
     }
     .header-btn{
         height: 40px;
+    }
+    .popup__close{
+        top: 5px;
+        right: 5px;
     }
 }
 

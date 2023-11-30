@@ -170,7 +170,7 @@ function bodyUnLock() {
 new Swiper('.slider',{
     direction: 'horizontal',
     loop: true,
-    slidesPerView: 'auto',
+    slidesPerView: 0.4,
     spaceBetween: 30,
     navigation: {
         nextEl: ".swiper-button-next",
@@ -178,5 +178,19 @@ new Swiper('.slider',{
     },
     speed: 800,
     freeMode: true,
+    breakpoints:{
+        440:{
+            slidesPerView: 0.5,
+            spaceBetween: 30,
+          },
+        550:{
+          slidesPerView: 0.8,
+          spaceBetween: 30,
+        },
+        768:{
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+          }
+      }
 
 });

@@ -386,7 +386,6 @@ template {
   display: none !important;
 }
 
-/*-------------- Adaptiv font ------------------*/
 /*------------------- Adaptiv property ------------*/
 .body--lock {
   overflow: hidden;
@@ -677,6 +676,9 @@ template {
 .search__mobile {
   display: none;
 }
+.search__mobile:hover {
+  box-shadow: 0px 0px 5px 6px rgba(233, 229, 238, 0.4);
+}
 
 .header__search--open .header__search {
   display: block;
@@ -721,7 +723,7 @@ template {
   background-color: rgba(78, 57, 105, 0.9);
   overflow-y: auto;
   overflow-x: hidden;
-  transition: all 0.5s ease 0s;
+  transition: opacity 0.5s ease 0s;
   z-index: 1000;
 }
 .popup.popup--open {
@@ -768,6 +770,8 @@ template {
   padding: 20px;
 }
 .popup__body {
+  display: grid;
+  grid-template-areas: "popup__title popup__btn-reg" "popup__subtitle popup__btn-reg" "form-signin form-signin";
   position: relative;
   width: 680px;
   background-color: #fff;
@@ -783,7 +787,8 @@ template {
   font-weight: 700;
   line-height: 1.1818181818;
   color: #4E3969;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
+  grid-area: popup__title;
 }
 .popup__subtitel {
   font-size: 14px;
@@ -791,10 +796,10 @@ template {
   font-weight: 600;
   line-height: 1.4285714286;
   color: rgba(122, 109, 138, 0.65);
-  padding-bottom: 36px;
-  margin-top: -6px;
+  margin-bottom: 36px;
+  grid-area: popup__subtitle;
 }
-.popup__link {
+.popup__link-reg {
   text-decoration: none;
   color: #444;
   font-size: 13px;
@@ -805,11 +810,20 @@ template {
   border-radius: 40px;
   background: rgba(233, 229, 238, 0.4);
 }
-.popup__link:hover {
+.popup__link-reg:hover {
   color: #444;
   background-color: rgb(233, 229, 238);
+  box-shadow: 0px 0px 5px 6px rgba(233, 229, 238, 0.4);
+}
+.popup__btn-reg {
+  grid-area: popup__btn-reg;
+  padding-top: 10px;
+  justify-self: end;
 }
 
+.signin {
+  grid-area: form-signin;
+}
 .signin__form {
   margin-bottom: 22px;
 }
@@ -855,7 +869,7 @@ template {
   border-radius: 1px;
   background-color: #988FA1;
   transform: rotate(45deg);
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   opacity: 1;
 }
 .signin__password-btn--show.signin__password-btn::after {
@@ -864,6 +878,13 @@ template {
 .signin__content {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+.signin__check {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.signin__remind {
   margin-bottom: 30px;
 }
 .signin__remind-link {
@@ -889,10 +910,12 @@ template {
   opacity: 0;
 }
 .signin__check-input:checked + .signin__check-login::after {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 .signin__check-input:checked + .signin__check-register::after {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 .signin__check-link {
   font-style: normal;
@@ -915,7 +938,8 @@ template {
   margin-top: 6px;
 }
 .signin__check-login::before {
-  display: block;
+  opacity: 1;
+  visibility: visible;
   position: absolute;
   top: 4px;
   left: 0;
@@ -927,7 +951,8 @@ template {
   background-color: rgba(255, 150, 20, 0.1);
 }
 .signin__check-login::after {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
   top: 4px;
   left: 0;
@@ -948,7 +973,8 @@ template {
   margin-top: 6px;
 }
 .signin__check-register::before {
-  display: block;
+  opacity: 1;
+  visibility: visible;
   position: absolute;
   top: 24px;
   left: 0;
@@ -960,7 +986,8 @@ template {
   background-color: rgba(255, 150, 20, 0.1);
 }
 .signin__check-register::after {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
   top: 24px;
   left: 0;
@@ -1014,6 +1041,25 @@ template {
   .signin__check-register br {
     display: none;
   }
+  .slider__slide .slider__small-slide {
+    flex-direction: row;
+  }
+  .slider__small-slide .item-1, .slider__small-slide .item-2, .slider__slide .item-3 {
+    max-width: 50%;
+    max-height: auto;
+  }
+  .slider__slide .item-3 {
+    max-width: calc(33.3333333333% - 30px);
+    max-height: auto;
+  }
+  .slider__slide .item-3 .slider__slide-text {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) and (max-Width: 1960px) {
+  .slider__slide .item-3 .slider__slide-text {
+    font-size: calc(20px + 10 * ((100vw - 320px) / 1640));
+  }
 }
 @media (max-width: 615px) {
   .popup__body {
@@ -1041,6 +1087,7 @@ template {
     margin: 0;
   }
   .header__btn-link {
+    width: 100%;
     padding: 0;
   }
   .header__btn-link span {
@@ -1062,22 +1109,20 @@ template {
   .search__mobile-btn {
     width: calc(30px + 38 * (100vw - 320px) / 230);
   }
-  .popup__btn {
-    position: absolute;
-    bottom: 25px;
-    left: 40px;
-    content: "";
-    width: 100%;
-    height: auto;
-    padding: 18px 80px;
-  }
-  .popup__link {
-    padding: 15px 84px;
-  }
   .popup__body {
     position: relative;
     padding-top: 40px;
-    padding-bottom: 90px;
+    padding-bottom: 60px;
+    grid-template-areas: "popup__title popup__title" "popup__subtitle popup__subtitle" "form-signin form-signin" "popup__btn-reg popup__btn-reg";
+  }
+  .popup__btn-reg {
+    padding-top: 30px;
+    justify-self: center;
+  }
+  .popup__link-reg {
+    padding: 17px 77px;
+    font-size: 15px;
+    line-height: 1.5;
   }
 }
 @media (max-width: 440px) {
@@ -1093,6 +1138,16 @@ template {
   .header__logo img {
     height: 100%;
   }
+  .signin__check {
+    margin-bottom: 10px;
+  }
+  .signin__check-register {
+    margin-top: 3px;
+    margin-bottom: 10px;
+  }
+  .signin__remind {
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 340px) {
   .search__mobile {
@@ -1103,6 +1158,10 @@ template {
   }
   .header-btn {
     height: 40px;
+  }
+  .popup__close {
+    top: 5px;
+    right: 5px;
   }
 }
 .main {
@@ -1122,6 +1181,8 @@ template {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
 .slider__slide {
   max-width: 1137px;
@@ -1136,6 +1197,7 @@ template {
 .slider__slide-item .slider__slide-img {
   transform: scale(1.1);
   transition: transform 0.5s ease;
+  height: 100%;
 }
 .slider__slide-item .slider__slide-img:hover {
   transform: scale(1);
@@ -1143,16 +1205,21 @@ template {
 .slider__slide-text {
   position: absolute;
   content: "";
-  width: 100%;
   height: auto;
   bottom: 20px;
   left: 25px;
+  right: 15px;
   color: #FFF;
   font-size: 30px;
   font-style: normal;
   font-weight: 800;
   line-height: 1;
   margin: 0;
+}
+@media (max-Width: 1960px) {
+  .slider__slide-text {
+    font-size: calc(20px + 10 * ((100vw - 320px) / 1640));
+  }
 }
 .slider__arrow {
   top: 50%;
@@ -1179,9 +1246,14 @@ template {
   max-width: 750px;
   max-height: 500px;
 }
-.item-3 .swiper__slide-text {
+.item-3 .slider__slide-text {
   font-size: 44px;
-  line-height: 50px;
+  line-height: 1.1363636364;
+}
+@media (max-Width: 1960px) {
+  .item-3 .slider__slide-text {
+    font-size: calc(30px + 14 * ((100vw - 320px) / 1640));
+  }
 }
 
 .swiper-button-next::after, .swiper-button-prev::after {

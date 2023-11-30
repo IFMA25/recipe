@@ -14,6 +14,7 @@
         display: flex;
         flex-direction: column;
         row-gap: 30px;
+        column-gap: 30px;
     }
     &__slide{
         max-width: 1137px;
@@ -25,6 +26,7 @@
             & .slider__slide-img{
                 transform: scale(1.1);
                 transition: transform 0.5s ease;
+                height: 100%;
                 &:hover{
                     transform: scale(1);
                 }
@@ -33,12 +35,12 @@
         &-text{
             position: absolute;
             content: '';
-            width: 100%;
             height: auto;
             bottom: 20px;
             left: 25px;
+            right: 15px;
             color: #FFF;
-            font-size: 30px;
+            @include adaptiv-value('font-size', 30, 20, 1);
             font-style: normal;
             font-weight: 800;
             line-height: 1;
@@ -68,9 +70,9 @@
 .item-3{
     max-width: 750px;
     max-height: 500px;
-    & .swiper__slide-text{
-        font-size: 44px;
-        line-height: 50px;
+    & .slider__slide-text{
+        @include adaptiv-value('font-size', 44, 30, 1);
+        line-height: 1.136363636363636;
     }
 }
 .swiper-button-next::after, .swiper-button-prev::after{

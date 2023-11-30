@@ -9,7 +9,7 @@
     background-color: rgba(78, 57, 105, 0.90);
     overflow-y: auto;
     overflow-x: hidden;
-    transition: all .5s ease 0s;
+    transition: opacity .5s ease 0s;
     z-index: 1000;
     &.popup--open{
         opacity: 1;
@@ -55,6 +55,11 @@
         padding: 20px;
     }
     &__body{
+        display: grid;
+        grid-template-areas: 
+        "popup__title popup__btn-reg"
+        "popup__subtitle popup__btn-reg"
+        "form-signin form-signin";
        position: relative;
        width: 680px;
        background-color: #fff;
@@ -70,7 +75,8 @@
         font-weight: 700;
         line-height: 1.181818181818182;
         color: $violet;
-        margin-bottom: 6px;
+        margin-bottom: 10px;
+        grid-area: popup__title;
     }
     &__subtitel{
         font-size: 14px;
@@ -78,10 +84,10 @@
         font-weight: 600;
         line-height: 1.428571428571429;
         color: rgba(122, 109, 138, 0.65);
-        padding-bottom: 36px;
-        margin-top: -6px;
+        margin-bottom: 36px;
+        grid-area: popup__subtitle;
     }
-    &__link{
+    &__link-reg{
         text-decoration: none;
         color: #444;
         font-size: 13px;
@@ -94,10 +100,17 @@
         &:hover{
             color: #444;
             background-color: rgba(233, 229, 238);
+            box-shadow: 0px 0px 5px 6px rgba(233, 229, 238, 0.4);
         }
+    }
+    &__btn-reg{
+        grid-area: popup__btn-reg;
+        padding-top: 10px;
+        justify-self: end;
     }
 }
 .signin{
+    grid-area: form-signin;
     &__form{
         margin-bottom: 22px;
         &-label{
@@ -142,7 +155,7 @@
             border-radius: 1px;
             background-color: #988FA1;
             transform: rotate(45deg);
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
             opacity: 1;
             }
         &--show.signin__password-btn::after{
@@ -152,6 +165,13 @@
     &__content{
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__check{
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+    &__remind{
         margin-bottom: 30px;
     }
     &__remind-link{
@@ -176,10 +196,12 @@
             position: absolute;
             opacity: 0;
             &:checked + .signin__check-login::after{
-                display: block;
+                opacity: 1;
+                visibility: visible;
             }
             &:checked + .signin__check-register::after{
-                display: block;
+                opacity: 1;
+                visibility: visible;
             }
         }
         &-link{
@@ -202,7 +224,8 @@
             padding-left: 30px;
             margin-top: 6px;
             &::before{
-                display: block;
+                opacity: 1;
+                visibility: visible;
                 position: absolute;
                 top: 4px;
                 left: 0;
@@ -214,7 +237,8 @@
                 background-color: rgba(255, 150, 20, 0.1);
             }
             &::after{
-                display: none;
+                opacity: 0;
+                visibility: hidden;
                 position: absolute;
                 top: 4px;
                 left: 0;
@@ -236,7 +260,8 @@
             padding-left: 30px;
             margin-top: 6px;
             &::before{
-                display: block;
+                opacity: 1;
+                visibility: visible;
                 position: absolute;
                 top: 24px;
                 left: 0;
@@ -248,7 +273,8 @@
                 background-color: rgba(255, 150, 20, 0.1);
             }
             &::after{
-                display: none;
+                opacity: 0;
+                visibility: hidden;
                 position: absolute;
                 top: 24px;
                 left: 0;
