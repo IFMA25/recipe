@@ -1,0 +1,42 @@
+.navigation{
+    background-color: #fff;
+    padding-bottom: 16px;
+    &__list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    &__item{
+        position: relative;
+        list-style: none;
+        margin-right: 40px;
+        &:last-child{
+            margin-right: 0;
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color:$violet;
+        }
+        &:hover.navigation__item:before{
+            width: 100%;
+            transition: width 0.5s ease;
+        }
+    }
+    &__link{
+        text-decoration: none;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.5;
+        color: $violet;
+        &:hover{
+            color: $violet;
+        }
+    }
+}
