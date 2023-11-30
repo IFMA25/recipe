@@ -443,6 +443,13 @@ template {
   border-radius: 2px;
 }
 
+.banner {
+  width: 300px;
+  height: 270px;
+  border: 1px #000 solid;
+  background-color: grey;
+}
+
 .btn {
   border: none;
   text-decoration: none;
