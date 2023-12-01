@@ -413,6 +413,7 @@ template {
 
 .main {
   min-width: 0;
+  padding-top: 70px;
 }
 
 .text {
@@ -1042,6 +1043,7 @@ template {
   position: relative;
   width: 100%;
   padding-bottom: 16px;
+  padding-top: 16px;
   background-color: #FFF;
 }
 .slider-main__wrapper {
