@@ -167,7 +167,7 @@ function bodyUnLock() {
 
 
 /*-----------SWIPER SLIDER---------------------*/
-new Swiper('.slider',{
+let sliderMain = new Swiper('.slider-main',{
     direction: 'horizontal',
     loop: true,
     slidesPerView: 0.4,
@@ -194,3 +194,16 @@ new Swiper('.slider',{
       }
 
 });
+let sliderSmall = new Swiper ('.slider-small',{
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 4,
+    spaceBetween: 28,
+    freeMode: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    speed: 800,
+    freeMode: true,
+})
