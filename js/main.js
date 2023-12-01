@@ -197,7 +197,7 @@ let sliderMain = new Swiper('.slider-main',{
 let sliderSmall = new Swiper ('.slider-small',{
     direction: 'horizontal',
     loop: true,
-    slidesPerView: 4,
+    slidesPerView: 'auto',
     spaceBetween: 28,
     freeMode: true,
     navigation: {
