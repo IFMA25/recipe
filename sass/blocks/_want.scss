@@ -1,15 +1,24 @@
 .want{
+    display: grid;
+    grid-template-areas:
+    "title title"
+    "content banner";
+    grid-template-columns: 1fr;
     padding-top: 40px;
     &__title{
         margin-bottom: 30px;
+        grid-area: title;
     }
     &__content{
         display: flex;
+        grid-area: content;
+        flex-wrap: wrap;
+        margin-right: -20px;
     }
     &__inner{
-        width: calc(100% / 3);
+        width: calc(100% / 3 - 20px);
         flex-wrap: wrap;
-        padding-right: 20px;
+        margin-right: 20px;
     }
     &__title-link{
         font-size: 22px;

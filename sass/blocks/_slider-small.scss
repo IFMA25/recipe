@@ -1,0 +1,69 @@
+.slider-small{
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 40px;
+     &__slide{
+         max-width: 264px;
+         height: auto;
+         border-radius: 5px;
+         background: #FFF;
+         box-shadow: 0px 6px 12px 0px rgba(78, 57, 105, 0.07);
+         overflow: hidden;
+     }
+     &__img{
+         width: 264px;
+         height: 180px;
+     }
+     &__content{
+         padding: 10px 20px;
+     }
+     &__slide-title{
+         overflow: hidden;
+         color: #4E3969;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+         font-size: 18px;
+         font-weight: 800;
+         line-height: 1.333333333333333;
+         margin-bottom: 10px;
+     }
+     &__icon{
+         display: flex;
+         align-items: baseline;
+     }
+     &__arrow{
+         width: 40px;
+         height: 40px;
+         content: '';
+         right: 0;
+         bottom: 0;
+         border: 2px $orange solid;
+         border-radius: 50%;
+         background-color: #fff;
+         &--left{
+             left: calc(100% - 86px);
+         }
+         &::after{
+             color: $orange;
+         }
+         &:hover{
+            box-shadow: 0px 0px 5px 6px rgba(255, 150, 20, 0.2);
+         }
+     }
+ }
+ .icon__recipe{
+     width: 18px;
+     height: 18px;
+     margin-right: 5px;
+     &-text{
+         color: #978FA1;
+         font-size: 12px;
+         font-weight: 600;
+         line-height: 1.5;
+         margin: 0 17px 0 0;
+         padding: 0;
+         &:last-child{
+             margin-right: 0;
+         }
+     }
+ }

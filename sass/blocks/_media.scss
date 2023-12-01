@@ -1,4 +1,24 @@
-
+@media (max-width:920px){
+        .navigation__list{
+            row-gap: 20px;
+            & .navigation__item{
+            width: calc(100% / 3);
+            margin-right: 0;
+            text-align: center;
+            }
+        }
+    .banner{
+        width: 100%;
+        height: 170px;
+        margin-bottom: 20px;
+    }
+    .want{
+        grid-template-areas:
+        "banner banner"
+        "title title"
+        "content content";
+    }
+}
 @media (max-width:768px){
     .search-form{
         display: none;
@@ -27,20 +47,18 @@
     .signin__check-register br{
         display: none;
     }
-    .slider__slide .slider__small-slide{
+    .slider-main__small-slide{
             flex-direction: row;
-            
        }
-    
-    .slider__small-slide .item-1, .slider__small-slide .item-2, .slider__slide .item-3{
+    .item-1, .item-2, .item-3{
         max-width: calc(100% / 2);
         max-height: auto;
     }
-    .slider__slide .item-3{
+    .item-3{
         max-width: calc(100% / 3 - 30px);
         max-height: auto;
     }
-    .slider__slide .item-3 .slider__slide-text{
+    .item-3 .slider-main__slide-text{
         @include adaptiv-value('font-size', 30, 20, 1);
     }
 }
@@ -49,10 +67,21 @@
         @include adaptiv-value('padding-left', 100, 20, 1);
         @include adaptiv-value('padding-right', 100, 20, 1);
     }
-    
 }
 
 @media (max-width:550px){
+    .container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .want{
+        &__title-link{
+            font-size: 18px;
+        }
+        &__link{
+            font-size: 14px;
+        }
+    }
     .header{
         padding: 10px 15px;
         column-gap: 15px;
@@ -102,6 +131,9 @@
         font-size: 15px;
         line-height: 1.5;
     }
+    .navigation{
+       display: none;
+    }
 }
 @media (max-width:440px){
     .header__search{
@@ -128,6 +160,12 @@
             margin-bottom: 20px;
         }
 
+    }
+    .want__content{
+        row-gap: 20px;
+    }
+    .want__inner{
+        width: calc(100% /2 - 20px);
     }
 
 
