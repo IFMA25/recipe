@@ -1,0 +1,47 @@
+.popular{
+    position: relative;
+    padding-top: 40px;
+    &__inner{
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+}
+.rated{
+    padding-bottom: 40px;
+    &__container{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 28px;
+        row-gap: 20px;
+        padding-top: 30px;
+    }
+}
+.dessert{
+    &__btn{
+        position: absolute;
+        content: '';
+        width: auto;
+        height: 40px;
+        bottom: -7px;
+        right: 106px;
+    }
+    &__inner{
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    &-slider__btn-prev{
+        left: calc(100% - 86px);
+    }
+}
+.appetizers{
+    padding-bottom: 40px;
+    &__container{
+        display: flex;
+        column-gap: 28px;
+        padding-top: 30px;
+    }
+    &__title {
+        display: flex;
+        justify-content: space-between;
+    }
+}
