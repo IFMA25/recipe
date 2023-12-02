@@ -1,10 +1,13 @@
 .want{
-    display: grid;
-    grid-template-areas:
-    "title title"
-    "content banner";
-    grid-template-columns: 1fr;
-    padding-top: 40px;
+    background-color: $body-bg;
+    &__container{
+        display: grid;
+        grid-template-areas:
+        "title title"
+        "content banner";
+        grid-template-columns: 1fr;
+        padding-top: 40px;
+    }
     &__title{
         margin-bottom: 30px;
         grid-area: title;

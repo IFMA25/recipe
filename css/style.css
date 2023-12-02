@@ -399,7 +399,7 @@ template {
 .wrapper {
   overflow: hidden;
   min-height: 100vh;
-  background-color: #F7F6F8;
+  background-color: #fff;
 }
 
 .container {
@@ -1137,7 +1137,6 @@ template {
 }
 
 .navigation {
-  background-color: #fff;
   padding-bottom: 16px;
 }
 .navigation__list {
@@ -1182,6 +1181,9 @@ template {
 }
 
 .want {
+  background-color: #F7F6F8;
+}
+.want__container {
   display: grid;
   grid-template-areas: "title title" "content banner";
   grid-template-columns: 1fr;
@@ -1255,6 +1257,9 @@ template {
 }
 
 .popular {
+  background-color: #F7F6F8;
+}
+.popular__container {
   position: relative;
   padding-top: 40px;
 }
