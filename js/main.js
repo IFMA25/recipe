@@ -195,16 +195,27 @@ let sliderMain = new Swiper('.slider-main',{
       }
 
 });
-let sliderSmall = new Swiper ('.slider-small',{
+let sliderPopular = new Swiper ('.popular-slider',{
     direction: 'horizontal',
     loop: true,
     slidesPerView: 'auto',
     spaceBetween: 28,
     freeMode: true,
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".popular-slider__btn-next",
+        prevEl: ".popular-slider__btn-prev",
     },
     speed: 800,
+});
+let sliderDessert = new Swiper ('.dessert-slider',{
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 28,
     freeMode: true,
+    navigation: {
+        nextEl: ".dessert-slider__btn-next",
+        prevEl: ".dessert-slider__btn-prev",
+    },
+    speed: 800,
 })
