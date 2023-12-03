@@ -33,19 +33,28 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 /*------------Search-----------*/
+const searchForm = document.querySelector('.search-form');
+if (searchForm){
+    searchForm.addEventListener("click", function(e){
+        searchForm.classList.toggle('search-form--active')
+    });
+}
 const search = document.querySelector('.search__mobile');
 const searchHeader = document.querySelector('.header');
+const searchResult = document.querySelector('.search-form__result');
 if (search){
     search.addEventListener("click", function(e){
         document.body.classList.toggle('header__search--open');
     });
     document.addEventListener("click", function(event) {
-        const isClickInsideSearch = search.contains(event.target) || searchHeader.contains(event.target);
+        const isClickInsideSearch = search.contains(event.target) || searchHeader.contains(event.target)||searchResult.contains(event.target);
         if (!isClickInsideSearch) {
             document.body.classList.remove('header__search--open');
+            searchForm.classList.remove('search-form--active')
         }
     });
 }
+
 
 /*------------- Password show -----------*/
 const passBtn = document.querySelectorAll('.signin__password-btn');

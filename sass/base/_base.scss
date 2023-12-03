@@ -38,7 +38,6 @@
     font-weight: 500;
     line-height: 1.15;
     color: $text-color;
-    text-transform: uppercase;
         &::before{
             position: absolute;
             content: '';
@@ -54,7 +53,7 @@
     width: 300px;
     height: 270px;
     border: 1px #000 solid;
-    background-color: grey;
+    background-color: #E8E8E8;
     grid-area: banner;
     justify-self: end;
 }
