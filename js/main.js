@@ -207,24 +207,38 @@ let sliderMain = new Swiper('.slider-main',{
 let sliderPopular = new Swiper ('.popular-slider',{
     direction: 'horizontal',
     loop: true,
+    spaceBetween: 20,
     slidesPerView: 'auto',
-    spaceBetween: 28,
-    freeMode: true,
     navigation: {
         nextEl: ".popular-slider__btn-next",
         prevEl: ".popular-slider__btn-prev",
     },
     speed: 800,
+    breakpoints:{
+        440:{
+            spaceBetween: 30,
+          },
+        1201:{
+            spaceBetween: 28,
+        },
+    }
 });
 let sliderDessert = new Swiper ('.dessert-slider',{
     direction: 'horizontal',
     loop: true,
     slidesPerView: 'auto',
-    spaceBetween: 28,
-    freeMode: true,
+    spaceBetween: 20,
     navigation: {
         nextEl: ".dessert-slider__btn-next",
         prevEl: ".dessert-slider__btn-prev",
     },
     speed: 800,
+    breakpoints:{
+        440:{
+            spaceBetween: 30,
+          },
+        1201:{
+            spaceBetween: 28,
+        },
+    }
 })

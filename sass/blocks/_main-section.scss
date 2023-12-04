@@ -1,10 +1,6 @@
 .popular{
     position: relative;
     padding-top: 40px;
-    &__inner{
-        margin-left: -10px;
-        margin-right: -10px;
-    }
     &__title {
         text-transform: uppercase;
     }
@@ -14,6 +10,7 @@
     &__container{
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         column-gap: 28px;
         row-gap: 20px;
         padding-top: 30px;
@@ -31,10 +28,6 @@
         bottom: -7px;
         right: 106px;
     }
-    &__inner{
-        margin-left: -10px;
-        margin-right: -10px;
-    }
     &-slider__btn-prev{
         left: calc(100% - 86px);
     }
@@ -46,8 +39,11 @@
     padding-bottom: 40px;
     &__container{
         display: flex;
+        flex-wrap: wrap;
         column-gap: 28px;
+        row-gap: 20px;
         padding-top: 30px;
+        justify-content: center;
     }
     &__title {
         display: flex;
