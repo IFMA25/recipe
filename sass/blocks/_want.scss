@@ -6,7 +6,7 @@
         grid-template-columns: 1fr;
         padding-top: 40px;
     &__title{
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         grid-area: title;
         text-transform: uppercase;
     }
@@ -48,6 +48,7 @@
         }
         &:hover.want__title-list::before{
             width: 100%;
+            transition: width 0.3s ease;
         }
     }
     &__list{
@@ -57,12 +58,9 @@
     &__item{
         list-style: none;
         margin-bottom: 10px;
-        &:hover .want__link{
-            font-weight: 700;
-            transition: font-weight 0.3s ease;
-        }
     }
     &__link{
+        display: block;
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
@@ -70,7 +68,8 @@
         color: $violet;
         text-decoration: none;
         &:hover{
-            color: $violet;
+            color: $orange;
+            transition: color 0.3s ease;
         }
     }
 }

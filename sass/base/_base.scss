@@ -11,14 +11,15 @@
     overflow: hidden;
     min-height: 100vh;
     background-color: #fff;
+    padding-top: 70px;
     }
 .container {
     width: 100%;
     max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 15px;
+    padding-left: 15px;
     }
 .main{
     min-width: 0;
@@ -38,13 +39,14 @@
     font-weight: 500;
     line-height: 1.15;
     color: $text-color;
+    padding-bottom: 10px;
         &::before{
             position: absolute;
             content: '';
             width: 50px;
             height: 3px;
             background-color: $orange;
-            bottom: -7px;
+            bottom: 0;
             left: 0;
             border-radius: 2px;
         }
