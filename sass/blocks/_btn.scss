@@ -15,9 +15,10 @@
 }
 .view-all{
     &__link{
+        display: block;
         border-radius: 40px;
         border: 1px solid #E9E5EE;
-        padding: 11px 22px;
+        padding: 10px 22px;
         text-decoration: none;
         color:#444;
         background: #FFF;

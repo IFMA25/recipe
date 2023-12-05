@@ -6,9 +6,9 @@
     height: auto;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 30px;
+    padding: 10px 30px 10px 20px;
     background-color: #fff;
-    border-bottom: #A8A7A6;
+    border-bottom: 1px #F7F6F8 solid;
     z-index: 1000;
     &__inner{
         display: flex;
@@ -112,21 +112,22 @@
         position: absolute;
         content: '';
         width: 50px;
-        height: 20px;
+        height: 50px;
         right: 0;
-        top: 15px;
+        top: 0;
         border: none;
         background-color: transparent;
+        padding: 10px;
         &::before{
             position: absolute;
             content: '';
-            width: 7px;
-            height: 7px;
+            width: 8px;
+            height: 8px;
             border-top: 2px $violet solid;
             border-right: 2px $violet solid;
             border-radius: 2px;
             transform: rotate(-45deg);
-            top: calc(50% - 2px);
+            top: calc(50% - 4px);
             right: calc(50% - 4px);
         }
     }
