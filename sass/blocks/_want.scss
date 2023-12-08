@@ -9,6 +9,9 @@
         margin-bottom: 20px;
         grid-area: title;
         text-transform: uppercase;
+        &-link{
+            display: block;
+        }
     }
     &__content{
         display: flex;

@@ -32,6 +32,9 @@
                 }
             }
         }
+        &-link{
+            display: block;
+        }
         &-text{
             position: absolute;
             content: '';
@@ -58,6 +61,10 @@
         font-size: 0;
         border-radius: 50%;
         margin: 0;
+        &:hover{
+            background-color: rgba(233, 229, 238, 1);
+            transition: background-color 0.3s ease;
+        }
     }
 }
 .item-1{
