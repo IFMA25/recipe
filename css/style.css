@@ -405,6 +405,7 @@ template {
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
+  padding-top: 40px;
 }
 
 .main {
@@ -463,24 +464,6 @@ template {
 .btn:hover {
   box-shadow: 0px 0px 5px 6px rgba(255, 150, 20, 0.2);
   color: #fff;
-}
-
-.view-all__link {
-  display: block;
-  border-radius: 40px;
-  border: 1px solid #E9E5EE;
-  padding: 10px 22px;
-  text-decoration: none;
-  color: #444;
-  background: #FFF;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1.3846153846;
-}
-.view-all__link:hover {
-  color: #FF9614;
-  border: 1px solid #FF9614;
-  box-shadow: 0px 0px 5px 6px rgba(255, 150, 20, 0.2);
 }
 
 .header {
@@ -1314,32 +1297,62 @@ template {
   transition: width 0.5s ease;
 }
 
-.want {
+.recipe__view-btn {
+  display: block;
+  border-radius: 40px;
+  border: 1px solid #E9E5EE;
+  padding: 10px 22px;
+  text-decoration: none;
+  color: #444;
+  background: #FFF;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3846153846;
+}
+.recipe__view-btn:hover {
+  color: #FF9614;
+  border: 1px solid #FF9614;
+  box-shadow: 0px 0px 5px 6px rgba(255, 150, 20, 0.2);
+}
+.recipe__view-all {
+  position: absolute;
+  content: "";
+  width: auto;
+  height: 40px;
+  bottom: 0;
+  top: 0;
+  right: 0;
+}
+.recipe__view-all--slider {
+  right: 106px;
+}
+.recipe-proposition {
+  padding-bottom: 40px;
   display: grid;
   grid-template-areas: "title title" "content banner";
   grid-template-columns: 1fr;
-  padding-top: 40px;
 }
-.want__title {
+.recipe-proposition__title {
   margin-bottom: 20px;
   grid-area: title;
   text-transform: uppercase;
 }
-.want__title-link {
+.recipe-proposition__title-link {
   display: block;
 }
-.want__content {
+.recipe-proposition__wrapper {
   display: flex;
   grid-area: content;
   flex-wrap: wrap;
   margin-right: -20px;
+  padding-top: 30px;
 }
-.want__inner {
+.recipe-proposition__inner {
   width: calc(33.3333333333% - 20px);
   flex-wrap: wrap;
   margin-right: 20px;
 }
-.want__title-link {
+.recipe-proposition__title-link {
   font-size: 22px;
   font-style: normal;
   font-weight: 800;
@@ -1347,15 +1360,15 @@ template {
   color: #4E3969;
   text-decoration: none;
 }
-.want__title-link:hover {
+.recipe-proposition__title-link:hover {
   color: #4E3969;
 }
-.want__title-list {
+.recipe-proposition__title-list {
   display: inline-block;
   position: relative;
   margin-bottom: 14px;
 }
-.want__title-list::before {
+.recipe-proposition__title-list::before {
   position: absolute;
   content: "";
   bottom: 0;
@@ -1364,19 +1377,19 @@ template {
   height: 2px;
   background-color: #4E3969;
 }
-.want__title-list:hover.want__title-list::before {
+.recipe-proposition__title-list:hover.want__title-list::before {
   width: 100%;
   transition: width 0.3s ease;
 }
-.want__list {
+.recipe-proposition__list {
   padding: 0;
   margin: 0;
 }
-.want__item {
+.recipe-proposition__item {
   list-style: none;
   margin-bottom: 10px;
 }
-.want__link {
+.recipe-proposition__link {
   display: block;
   font-size: 18px;
   font-style: normal;
@@ -1385,9 +1398,37 @@ template {
   color: #4E3969;
   text-decoration: none;
 }
-.want__link:hover {
+.recipe-proposition__link:hover {
   color: #FF9614;
   transition: color 0.3s ease;
+}
+.recipe-slider {
+  padding-bottom: 40px;
+}
+.recipe-slider__title {
+  text-transform: uppercase;
+}
+.recipe-slider__title {
+  text-transform: uppercase;
+}
+.recipe-block {
+  padding-bottom: 40px;
+}
+.recipe-block__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  -moz-column-gap: 28px;
+       column-gap: 28px;
+  row-gap: 20px;
+  padding-top: 30px;
+  margin-right: -14px;
+  margin-left: -14px;
+}
+.recipe-block__title {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
 }
 
 .card {
@@ -1450,7 +1491,11 @@ template {
 .slider-small {
   width: auto;
   padding-top: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-right: -8px;
+  margin-left: -8px;
 }
 .slider-small__arrow {
   width: 40px;
@@ -1463,10 +1508,7 @@ template {
   background-color: #fff;
   margin: 0;
 }
-.slider-small__arrow.popular-slider__btn-prev {
-  left: calc(100% - 86px);
-}
-.slider-small__arrow .dessert-slider__btn-prev {
+.slider-small__arrow.slider-small__btn-prev {
   left: calc(100% - 86px);
 }
 .slider-small__arrow::after {
@@ -1474,66 +1516,6 @@ template {
 }
 .slider-small__arrow:hover {
   box-shadow: 0px 0px 5px 6px rgba(255, 150, 20, 0.2);
-}
-
-.popular {
-  position: relative;
-  padding-top: 40px;
-}
-.popular__title {
-  text-transform: uppercase;
-}
-
-.rated {
-  padding-bottom: 40px;
-}
-.rated__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  -moz-column-gap: 28px;
-       column-gap: 28px;
-  row-gap: 20px;
-  padding-top: 30px;
-  margin-right: -14px;
-  margin-left: -14px;
-}
-.rated__title {
-  text-transform: uppercase;
-}
-
-.dessert__btn {
-  position: absolute;
-  content: "";
-  width: auto;
-  height: 40px;
-  bottom: 0;
-  top: 0;
-  right: 106px;
-}
-.dessert-slider__btn-prev {
-  left: calc(100% - 86px);
-}
-.dessert__title {
-  text-transform: uppercase;
-}
-
-.appetizers {
-  padding-bottom: 40px;
-}
-.appetizers__container {
-  display: flex;
-  flex-wrap: wrap;
-  -moz-column-gap: 28px;
-       column-gap: 28px;
-  row-gap: 20px;
-  padding-top: 30px;
-  justify-content: center;
-}
-.appetizers__title {
-  display: flex;
-  justify-content: space-between;
-  text-transform: uppercase;
 }
 
 .footer {
@@ -1624,7 +1606,7 @@ template {
     height: 170px;
     margin-bottom: 20px;
   }
-  .want {
+  .recipe-proposition {
     grid-template-areas: "banner banner" "title title" "content content";
   }
 }
@@ -1697,10 +1679,10 @@ template {
   }
 }
 @media (max-width: 550px) {
-  .want__title-link {
+  .recipe-proposition__title-link {
     font-size: 18px;
   }
-  .want__link {
+  .recipe-proposition__link {
     font-size: 14px;
   }
   .header {
@@ -1781,10 +1763,10 @@ template {
   .signin__remind {
     margin-bottom: 20px;
   }
-  .want__content {
+  .recipe-proposition__wrapper {
     row-gap: 20px;
   }
-  .want__inner {
+  .recipe-proposition__inner {
     width: calc(50% - 20px);
   }
   .dessert__btn {
@@ -1793,7 +1775,7 @@ template {
   .slider-small__arrow {
     display: none;
   }
-  .view-all__link {
+  .recipe__view-all__btn {
     font-size: 10px;
     padding: 8px 16px;
   }

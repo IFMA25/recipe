@@ -20,8 +20,8 @@ const scrollController = {
         document.documentElement.style.scrollBehavior = '';
     },
 };
-const popupLink = document.querySelectorAll('.header__btn');
-const lockPadding = document.querySelectorAll('.lock-padding');
+const popupLink = document.querySelectorAll('.popup-btn--js');
+const lockPadding = document.querySelectorAll('.header__lock-padding-js');
 let unlock = true;
 const timeout = 500;
 
@@ -33,6 +33,7 @@ if (popupLink.length > 0) {
             const popupName = link.getAttribute('href').replace('#', '');
             const popupCurent = document.getElementById(popupName);
             popupOpen(popupCurent);
+            console.log('найти попап');
             e.preventDefault();
         })
     }
@@ -70,6 +71,7 @@ function popupClose(popupActive, doUnlock = true) {
         popupActive.classList.remove('popup--open');
         if (doUnlock) {
             bodyUnLock();
+            console.log('закрыть попап-2');
         }
     }
 };
@@ -232,14 +234,14 @@ let sliderMain = new Swiper('.slider-main',{
       }
 
 });
-let sliderPopular = new Swiper ('.popular-slider',{
+let sliderSmallFirst = new Swiper ('.recipe-slider-1',{
     direction: 'horizontal',
     loop: true,
     spaceBetween: 20,
     slidesPerView: 1,
     navigation: {
-        nextEl: ".popular-slider__btn-next",
-        prevEl: ".popular-slider__btn-prev",
+        nextEl: ".slider-small__btn-next",
+        prevEl: ".slider-small__btn-prev",
     },
     speed: 800,
     breakpoints:{
@@ -257,22 +259,28 @@ let sliderPopular = new Swiper ('.popular-slider',{
         },
     }
 });
-let sliderDessert = new Swiper ('.dessert-slider',{
+let sliderSmallSecond = new Swiper ('.recipe-slider-2',{
     direction: 'horizontal',
     loop: true,
-    slidesPerView: 'auto',
     spaceBetween: 20,
+    slidesPerView: 1,
     navigation: {
-        nextEl: ".dessert-slider__btn-next",
-        prevEl: ".dessert-slider__btn-prev",
+        nextEl: ".slider-small__btn-next",
+        prevEl: ".slider-small__btn-prev",
     },
     speed: 800,
     breakpoints:{
-        440:{
-            spaceBetween: 30,
+        620:{
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+        860:{
+            slidesPerView: 3,
+            spaceBetween: 20,
           },
         1201:{
             spaceBetween: 28,
+            slidesPerView: 4,
         },
     }
-})
+});
