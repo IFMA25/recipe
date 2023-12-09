@@ -1,10 +1,11 @@
 .slider-small{
         width: auto;
         padding-top: 30px;
-        padding-bottom: 40px;
-      &__wrapper{
-         
-      }
+        padding-bottom: 10px;
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-right: -8px;
+        margin-left: -8px;
      &__arrow{
          width: 40px;
          height: 40px;
@@ -15,10 +16,7 @@
          border-radius: 50%;
          background-color: #fff;
          margin: 0;
-         &.popular-slider__btn-prev{
-            left: calc(100% - 86px);
-         }
-         & .dessert-slider__btn-prev{
+         &.slider-small__btn-prev{
             left: calc(100% - 86px);
          }
          &::after{
