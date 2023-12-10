@@ -8,6 +8,7 @@
         background: #FFF;
         box-shadow: 0px 6px 12px 0px rgba(78, 57, 105, 0.07);
         overflow: hidden;
+        margin-right: 28px;
     &__link{
         display: block;
         text-decoration: none;
@@ -34,10 +35,10 @@
                 margin-right: 0;
             }
             &--cap{
-                background: url(../../img/difficolta-grey.svg) no-repeat;
+                background: url(../img/difficolta-grey.svg) no-repeat;
             }
             &--time{
-                background: url(../../img/tempo-grey.svg) no-repeat;
+                background: url(../img/tempo-grey.svg) no-repeat;
             }
         }
 

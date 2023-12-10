@@ -1,6 +1,6 @@
 
 /*------------------- Adaptiv property ------------*/
-    $maxWidthContainer: 1960;
+    $maxWidthContainer: 1170;
     @mixin adaptiv-value($property, $startSize, $minSize, $type){
         $addSize: $startSize - $minSize;
 //only less container

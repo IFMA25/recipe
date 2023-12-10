@@ -12,6 +12,7 @@
     z-index: 1000;
     &__inner{
         display: flex;
+        align-items: center;
     }
     &__logo-link{
         display: block;
@@ -33,7 +34,7 @@
                 height: 2px;
                 background-color: #000;
                 top: 15px;
-                left: 0;
+                left: 10px;
                 border-radius: 2px;
                 &::before{
                     position: absolute;
@@ -199,7 +200,7 @@
         z-index: 100;
     }
     &__btn{
-        display: inline-block;
+        display: block;
         border-radius: 20px;
         border: none;
         text-decoration: none;

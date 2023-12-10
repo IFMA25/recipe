@@ -1,9 +1,16 @@
 .recipe{
+    &__header{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title{
+        margin-bottom: 30px;
+    }
     &__view-btn{
-        display: block;
+        display: inline-block;
         border-radius: 40px;
         border: 1px solid #E9E5EE;
-        padding: 10px 22px;
+        padding: 11px 22px;
         text-decoration: none;
         color:#444;
         background: #FFF;
@@ -14,18 +21,6 @@
             color: $orange;
             border: 1px solid $orange;
             box-shadow: 0px 0px 5px 6px rgba(255, 150, 20, 0.2);
-        }
-    }
-    &__view-all{
-        position: absolute;
-        content: '';
-        width: auto;
-        height: 40px;
-        bottom: 0;
-        top: 0;
-        right: 0;
-        &--slider{
-            right: 106px;
         }
     }
     &-proposition{
@@ -112,8 +107,8 @@
         &__title {
             text-transform: uppercase;
         }
-        &__title {
-            text-transform: uppercase;
+        &__header{
+            padding-right: 130px;
         }
     }
     &-block{
@@ -122,16 +117,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            column-gap: 28px;
             row-gap: 20px;
-            padding-top: 30px;
-            margin-right: -14px;
-            margin-left: -14px;
-        }
-        &__title {
-            display: flex;
-            justify-content: space-between;
-            text-transform: uppercase;
+            margin-right: -28px;
         }
     }
 }

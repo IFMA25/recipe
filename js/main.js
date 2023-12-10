@@ -1,4 +1,5 @@
 'use strict'
+/*----------------------POPUP-------------------*/
 const scrollController = {
     scrollPosition: 0,
     disabledScroll() {
@@ -33,7 +34,6 @@ if (popupLink.length > 0) {
             const popupName = link.getAttribute('href').replace('#', '');
             const popupCurent = document.getElementById(popupName);
             popupOpen(popupCurent);
-            console.log('найти попап');
             e.preventDefault();
         })
     }
@@ -71,7 +71,6 @@ function popupClose(popupActive, doUnlock = true) {
         popupActive.classList.remove('popup--open');
         if (doUnlock) {
             bodyUnLock();
-            console.log('закрыть попап-2');
         }
     }
 };
@@ -108,6 +107,7 @@ function bodyUnLock() {
     }, timeout);
 };
 
+
 /*----------------MENU------------------------*/
 const menuIcon = document.querySelector('.header__menu');
 const containerNavigation = document.querySelector('.header__nav');
@@ -143,12 +143,6 @@ const subMenuIcon = document.querySelector('.header__sub-arrow');
             closeMenu();
         }
     });
-
-
-
-
-
-
 
 
 /*------------Search-----------*/
@@ -245,15 +239,15 @@ let sliderSmallFirst = new Swiper ('.recipe-slider-1',{
     },
     speed: 800,
     breakpoints:{
-        620:{
+        401:{
             slidesPerView: 2,
             spaceBetween: 20,
           },
-        860:{
+        769:{
             slidesPerView: 3,
             spaceBetween: 20,
           },
-        1201:{
+        1161:{
             spaceBetween: 28,
             slidesPerView: 4,
         },
@@ -262,7 +256,7 @@ let sliderSmallFirst = new Swiper ('.recipe-slider-1',{
 let sliderSmallSecond = new Swiper ('.recipe-slider-2',{
     direction: 'horizontal',
     loop: true,
-    spaceBetween: 20,
+   spaceBetween: 20,
     slidesPerView: 1,
     navigation: {
         nextEl: ".slider-small__btn-next",
@@ -270,15 +264,15 @@ let sliderSmallSecond = new Swiper ('.recipe-slider-2',{
     },
     speed: 800,
     breakpoints:{
-        620:{
+        401:{
             slidesPerView: 2,
-            spaceBetween: 20,
+           spaceBetween: 20,
           },
-        860:{
+        769:{
             slidesPerView: 3,
             spaceBetween: 20,
           },
-        1201:{
+        1161:{
             spaceBetween: 28,
             slidesPerView: 4,
         },
