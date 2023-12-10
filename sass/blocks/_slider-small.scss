@@ -1,6 +1,5 @@
 .slider-small{
         width: auto;
-        padding-top: 30px;
         padding-bottom: 10px;
         padding-left: 8px;
         padding-right: 8px;
@@ -10,21 +9,21 @@
          width: 40px;
          height: 40px;
          content: '';
-         right: 0;
+         right: 8px;
          top: 0;
          border: 2px $orange solid;
          border-radius: 50%;
          background-color: #fff;
          margin: 0;
-         &.slider-small__btn-prev{
-            left: calc(100% - 86px);
-         }
          &::after{
              color: $orange;
          }
          &:hover{
             box-shadow: 0px 0px 5px 6px rgba(255, 150, 20, 0.2);
          }
+     }
+     &__btn-prev{
+        left: calc(100% - 100px);
      }
  }
 
