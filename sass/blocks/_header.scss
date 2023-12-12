@@ -92,6 +92,7 @@
         padding-bottom: 15px;
         padding-top: 15px;
         padding-left: 40px;
+        padding-right: 50px;
         &:last-child{
             border-bottom: 1px rgba(78, 57, 105, 0.15) solid;
         }
@@ -168,6 +169,7 @@
     }
     &__sub-list{
         padding-left: 20px;
+        padding-right: 20px;
         border-left: 2px $orange solid;
         border-radius: 1px;
         margin-top: 10px;
@@ -352,7 +354,7 @@
 .header__search--open .search__mobile{
     display: none;
 }
-.substrate{
+.header__menu-substrate{
     display: none;
     position: fixed;
     top: 0;
@@ -362,6 +364,6 @@
     background-color: rgba(78, 57, 105, 0.9);
     z-index: 800;
 }
-.header__menu--open ~ .substrate{
+.header__menu--open ~ .header__menu-substrate{
     display: block;
 }

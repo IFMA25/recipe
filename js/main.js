@@ -21,8 +21,8 @@ const scrollController = {
         document.documentElement.style.scrollBehavior = '';
     },
 };
-const popupLink = document.querySelectorAll('.popup-btn--js');
-const lockPadding = document.querySelectorAll('.header__lock-padding-js');
+const popupLink = document.querySelectorAll('.popup__btn--js');
+const lockPadding = document.querySelectorAll('.header__lock-padding--js');
 let unlock = true;
 const timeout = 500;
 
@@ -74,15 +74,19 @@ function popupClose(popupActive, doUnlock = true) {
         }
     }
 };
+const lockPaddingValue = window.innerWidth - document.body.offsetWidth;
 function bodyLock(){
-    const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
     if (lockPadding.length > 0) {
         for (let index = 0; index < lockPadding.length; index++) {
             const el = lockPadding[index];
-            el.style.paddingRight = lockPaddingValue;
+            const rightPaddingEl = window.getComputedStyle(el).getPropertyValue("padding-right");
+            const additionalPadding = parseFloat(rightPaddingEl.replace('px', ''));
+            el.style.paddingRight = additionalPadding + lockPaddingValue +'px';
+            console.log(rightPaddingEl)
+            console.log(el.style.paddingRight)
         }
     }
-    document.body.style.paddingRight = lockPaddingValue;
+    document.body.style.paddingRight = lockPaddingValue + 'px';
     scrollController.disabledScroll();
     unlock = false;
     setTimeout(function () {
@@ -94,10 +98,13 @@ function bodyUnLock() {
         if (lockPadding.length > 0) {
             for (let index = 0; index < lockPadding.length; index++) {
                 const el = lockPadding[index];
-                el.style.paddingRight = '0px';
+                const rightPaddingEl = window.getComputedStyle(el).getPropertyValue("padding-right");
+                const additionalPadding = parseFloat(rightPaddingEl.replace('px', ''));
+                el.style.paddingRight = (additionalPadding - lockPaddingValue) + 'px';
+                console.log(el.style.paddingRight)
             }
         }
-        document.body.style.paddingRight = '0px';
+       document.body.style.paddingRight = '0px';
        scrollController.enabledScroll();
     }, timeout);
 
@@ -170,7 +177,7 @@ if (search){
 
 
 /*------------- Password show -----------*/
-const passBtn = document.querySelectorAll('.signin__password-btn');
+const passBtn = document.querySelectorAll('.popup__form-show-password');
 passBtn.forEach(function(btn){
     btn.onclick = function(){
         let target = this.getAttribute('data-target'),
@@ -178,11 +185,11 @@ passBtn.forEach(function(btn){
 
         if (passInput.getAttribute('type') === 'password'){
             passInput.setAttribute('type', 'text');
-            btn.classList.add('signin__password-btn--show');
+            btn.classList.add('popup__form-show-password--open');
         } else {
             passInput.setAttribute('type', 'password');
-            btn.classList.remove('signin__password-btn--show');
-            document.getElementById('signin__password-btn').reset();
+            btn.classList.remove('popup__form-show-password--open');
+            document.getElementById('popup__form-show-password').reset();
         }
     }
 });
@@ -205,7 +212,7 @@ let sliderMain = new Swiper('.slider-main',{
     direction: 'horizontal',
     loop: true,
     slidesPerView: 0.4,
-    spaceBetween: 30,
+    spaceBetween: 20,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -213,15 +220,11 @@ let sliderMain = new Swiper('.slider-main',{
     speed: 800,
     freeMode: true,
     breakpoints:{
-        440:{
-            slidesPerView: 0.5,
-            spaceBetween: 30,
-          },
         550:{
-          slidesPerView: 0.8,
-          spaceBetween: 30,
+          slidesPerView: 0.5,
+          spaceBetween: 20,
         },
-        768:{
+        769:{
             slidesPerView: 'auto',
             spaceBetween: 30,
           }
@@ -239,11 +242,11 @@ let sliderSmallFirst = new Swiper ('.recipe-slider-1',{
     },
     speed: 800,
     breakpoints:{
-        401:{
+        551:{
             slidesPerView: 2,
             spaceBetween: 20,
           },
-        769:{
+        921:{
             slidesPerView: 3,
             spaceBetween: 20,
           },
@@ -264,11 +267,11 @@ let sliderSmallSecond = new Swiper ('.recipe-slider-2',{
     },
     speed: 800,
     breakpoints:{
-        401:{
+        551:{
             slidesPerView: 2,
            spaceBetween: 20,
           },
-        769:{
+        921:{
             slidesPerView: 3,
             spaceBetween: 20,
           },
