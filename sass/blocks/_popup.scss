@@ -56,10 +56,10 @@
     }
     &__body{
         display: grid;
-        grid-template-areas: 
-        "popup__title popup__btn-reg"
-        "popup__subtitle popup__subtitle"
-        "form-signin form-signin";
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+        "popup__header popup__auth"
+        "popup__form popup__form";
        position: relative;
        width: 680px;
        background-color: #fff;
@@ -69,14 +69,18 @@
         display: flex;
         justify-content: space-between;
     }
+    &__header{
+        grid-area: popup__header;
+        margin-bottom: 36px;
+        padding-right: 20px;
+    }
     &__title{
         font-size: 22px;
         font-style: normal;
         font-weight: 700;
         line-height: 1.181818181818182;
         color: $violet;
-        margin-bottom: 10px;
-        grid-area: popup__title;
+        margin-bottom: 6px;
     }
     &__subtitel{
         font-size: 14px;
@@ -84,35 +88,36 @@
         font-weight: 600;
         line-height: 1.428571428571429;
         color: rgba(122, 109, 138, 0.65);
-        margin-bottom: 36px;
-        grid-area: popup__subtitle;
     }
-    &__link-reg{
-        text-decoration: none;
-        color: #444;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 1.384615384615385;
-        padding: 11px 22px;
-        border-radius: 40px;
-        background: rgba(233, 229, 238, 0.40);
-        &:hover{
+    &__auth{
+        grid-area: popup__auth;
+        align-self: flex-start;
+        &-btn{
+            display: block;
+            text-decoration: none;
             color: #444;
-            background-color: rgba(233, 229, 238);
-            box-shadow: 0px 0px 5px 6px rgba(233, 229, 238, 0.4);
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1.384615384615385;
+            padding: 11px 22px;
+            border-radius: 40px;
+            background: rgba(233, 229, 238, 0.40);
+            &:hover{
+                color: #444;
+                background-color: rgba(233, 229, 238);
+                box-shadow: 0px 0px 5px 6px rgba(233, 229, 238, 0.4);
+            }
+            &--reg{
+                padding: 11px 27px;
+            }
         }
     }
-    &__btn-reg{
-        grid-area: popup__btn-reg;
-        padding-top: 10px;
-        justify-self: end;
-    }
-}
-.signin{
-    grid-area: form-signin;
     &__form{
-        margin-bottom: 22px;
+        grid-area: popup__form;
+        &-group{
+            margin-bottom: 22px;
+        }
         &-label{
             position: relative;
             display: block;
@@ -136,171 +141,119 @@
             font-weight: 700;
             line-height: 1.2;
         }
-    }
-    &__password-btn{
-        position: absolute;
-        content: '';
-        width: 22px;
-        height: 22px;
-        top: 50%;
-        right: 14px;
-        cursor: pointer;
-        &::after{
+        &-show-password{
             position: absolute;
             content: '';
-            top: calc(50% - 1px);
-            right: -1px;
-            width: 24px;
-            height: 2px;
-            border-radius: 1px;
-            background-color: #988FA1;
-            transform: rotate(45deg);
-            transition: all 0.2s ease;
-            opacity: 1;
-            }
-        &--show.signin__password-btn::after{
-            opacity: 0;
-            }
-        }
-    &__content{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-    &__check{
-        margin-right: 30px;
-        margin-bottom: 30px;
-    }
-    &__remind{
-        margin-bottom: 30px;
-    }
-    &__remind-link{
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 1.230769230769231;
-        text-decoration-line: underline;
-        color: #7A6D8A;
-        &:hover{
-            color: #7A6D8A;
-        }
-    }
-    &__check{
-        &-label{
-            position: relative;
-            margin: 0;
-            display: block;
+            width: 22px;
+            height: 22px;
+            top: 50%;
+            right: 14px;
             cursor: pointer;
-        }
-        &-input{
-            position: absolute;
-            opacity: 0;
-            &:checked + .signin__check-login::after{
-                opacity: 1;
-                visibility: visible;
-            }
-            &:checked + .signin__check-register::after{
-                opacity: 1;
-                visibility: visible;
+            background: url(../img/pass-close.svg) no-repeat center;
+            &.popup__form-show-password--open{
+                background: url(../img/pass-show.svg) no-repeat center;
             }
         }
-        &-link{
-            font-style: normal;
-            font-weight: 600;
-            line-height: 1.230769230769231;
-            color: #7A6D8A;
-            text-decoration: underline;
-            &:hover{
+        &-ctrl{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            &__check{
+            padding-right: 30px;
+            margin-bottom: 30px;
+            }
+            &-label{
+                position: relative;
+                margin: 0;
+                display: block;
+                cursor: pointer;
+            }
+            &-input{
+                position: absolute;
+                opacity: 0;
+                &:checked + .popup__form-ctrl-box::after{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            &-remind{
+                margin-bottom: 30px;
+            }
+            &-link{
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 1.230769230769231;
+                text-decoration-line: underline;
                 color: #7A6D8A;
+                &:hover{
+                    color: #7A6D8A;
+                }
+            }
+            &-box{
+                display: inline-block;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 1.230769230769231;
+                color: #7A6D8A;
+                padding-left: 30px;
+                margin-top: 6px;
+                &::before{
+                    opacity: 1;
+                    visibility: visible;
+                    position: absolute;
+                    top: 4px;
+                    left: 0;
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    border: 2px  solid $orange;
+                    border-radius: 4px;
+                    background-color: rgba(255, 150, 20, 0.1);
+                }
+                &::after{
+                    opacity: 0;
+                    visibility: hidden;
+                    position: absolute;
+                    top: 4px;
+                    left: 0;
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    background: url(../img/check.svg) no-repeat 50% 50%;
+                    text-align: center;
+                }
+                &--reg::before{
+                    top: 24px;
+                }
+                &--reg::after{
+                    top: 24px;
+                }
+            }
+            &-link{
+                font-style: normal;
+                font-weight: 600;
+                line-height: 1.230769230769231;
+                color: #7A6D8A;
+                text-decoration: underline;
+                &:hover{
+                    color: #7A6D8A;
+                }
             }
         }
-        &-login{
-            display: inline-block;
-            font-size: 13px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 1.230769230769231;
-            color: #7A6D8A;
-            padding-left: 30px;
-            margin-top: 6px;
-            &::before{
-                opacity: 1;
-                visibility: visible;
-                position: absolute;
-                top: 4px;
-                left: 0;
-                content: '';
-                width: 20px;
-                height: 20px;
-                border: 2px  solid $orange;
-                border-radius: 4px;
-                background-color: rgba(255, 150, 20, 0.1);
+        &-submit{
+            text-align: center;
+            &-btn{
+                padding: 14px 84px;
+                border-radius: 50px;
+                letter-spacing: .6px;
+                &--reg{
+                padding: 14px 75px;
             }
-            &::after{
-                opacity: 0;
-                visibility: hidden;
-                position: absolute;
-                top: 4px;
-                left: 0;
-                content: '';
-                width: 20px;
-                height: 20px;
-                background: url(../img/check.svg) no-repeat 50% 50%;
-                text-align: center;
             }
-
-        }
-        &-register{
-            display: inline-block;
-            font-size: 13px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 1.230769230769231;
-            color: #7A6D8A;
-            padding-left: 30px;
-            margin-top: 6px;
-            &::before{
-                opacity: 1;
-                visibility: visible;
-                position: absolute;
-                top: 24px;
-                left: 0;
-                content: '';
-                width: 20px;
-                height: 20px;
-                border: 2px  solid $orange;
-                border-radius: 4px;
-                background-color: rgba(255, 150, 20, 0.1);
-            }
-            &::after{
-                opacity: 0;
-                visibility: hidden;
-                position: absolute;
-                top: 24px;
-                left: 0;
-                content: '';
-                width: 20px;
-                height: 20px;
-                background: url(../img/check.svg) no-repeat 50% 50%;
-                text-align: center;
-            }
-
-        }
-    }
-    &__register{
-        text-align: center;
-        &-btn{
-            padding: 15px 75px;
-            border-radius: 50px;
-            letter-spacing: .6px;
-        }
-    }
-    &__submit{
-        text-align: center;
-        &-btn{
-            padding: 15px 84px;
-            border-radius: 50px;
-            letter-spacing: .6px;
         }
     }
 }
+
+
