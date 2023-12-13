@@ -674,12 +674,6 @@ template {
   border: none;
   text-decoration: none;
   background-color: #FF9614;
-  color: #fff;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.5;
-  text-align: center;
   padding: 0 5px 0 14px;
 }
 .header__btn:hover {
@@ -690,8 +684,15 @@ template {
   display: inline-block;
   width: 40px;
   height: 40px;
-  background: no-repeat url(../img/icon-accedi.svg) 50%/contain;
+  background: no-repeat url(../img/icon-accedi.svg);
   vertical-align: middle;
+}
+.header__btn-text {
+  color: #fff;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5;
 }
 
 .header__menu--open .header__menu-item::after {
@@ -1464,15 +1465,15 @@ template {
 }
 
 .footer {
-  padding-top: 30px;
   padding-bottom: 30px;
   background-color: #F7F6F8;
-  border-top: 1px #E6E6E6 solid;
 }
 .footer__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-top: 1px #E6E6E6 solid;
+  padding-top: 30px;
 }
 .footer__brend {
   color: #7A6D8A;

@@ -1,12 +1,12 @@
 .footer{
-    padding-top: 30px;
     padding-bottom: 30px;
     background-color: $body-bg;
-    border-top: 1px #E6E6E6 solid;
     &__container{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        border-top: 1px #E6E6E6 solid;
+        padding-top: 30px;
     }
     &__brend{
         color: #7A6D8A;

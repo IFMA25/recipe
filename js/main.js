@@ -21,7 +21,7 @@ const scrollController = {
         document.documentElement.style.scrollBehavior = '';
     },
 };
-const popupLink = document.querySelectorAll('.popup__btn--js');
+const popupLink = document.querySelectorAll('.popup-btn--js');
 const lockPadding = document.querySelectorAll('.header__lock-padding--js');
 let unlock = true;
 const timeout = 500;
