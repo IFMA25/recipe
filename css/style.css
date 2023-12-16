@@ -1706,7 +1706,7 @@ template {
   background: url(../img/pag-arrow-prev.svg) no-repeat;
 }
 .pagination__arrow-next {
-  background: url(../../img/pag-arrow-next.svg) no-repeat;
+  background: url(../img/pag-arrow-next.svg) no-repeat;
 }
 
 @media (max-width: 1200px) {
