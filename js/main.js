@@ -79,7 +79,8 @@ function bodyLock(){
     if (lockPadding.length > 0) {
         for (let index = 0; index < lockPadding.length; index++) {
             const el = lockPadding[index];
-            el.style.paddingRight = '0px';
+            const rightPaddingEl = window.getComputedStyle(el).getPropertyValue("padding-right");
+            el.style.paddingRight = rightPaddingEl + lockPaddingValue +'px';
         }
     }
     document.body.style.paddingRight = lockPaddingValue + 'px';
