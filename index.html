@@ -11,99 +11,100 @@
 <body class="body">
     <div class="wrapper">
         <header class="header header__lock-padding--js">
-            <div class="header__inner">
-                <div class="header__menu">
-                    <span class="header__menu-item"></span>
+            <div class="header__container">
+                <div class="header__inner">
+                    <div class="header__menu">
+                        <span class="header__menu-item"></span>
+                    </div>
+                    <div class="header__menu-substrate"></div>
+                    <nav class="header__nav">
+                        <ul class="header__nav-list">
+                                <li class="header__nav-item">
+                                    <a href="./index.html" class="header__nav-link">
+                                        <span class="header__nav-icon header__nav-icon--home"></span>
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="header__nav-item header__sub-nav">
+                                    <a href="./index.html" class="header__nav-link">
+                                        <span class="header__nav-icon header__nav-icon--arrow"></span>
+                                        Recipes
+                                    </a>
+                                    <button class="header__sub-arrow"></button>
+                                    <ul class="header__sub-list">
+                                        <li class="header__sub-item">
+                                            <a class="header__sub-link" href="./recipe-list.html">Appetizers</a>
+                                        </li>
+                                        <li class="header__sub-item">
+                                            <a class="header__sub-link" href="">First Courses</a>
+                                        </li>
+                                        <li class="header__sub-item">
+                                            <a class="header__sub-link" href="">Main Courses</a>
+                                        </li>
+                                        <li class="header__sub-item">
+                                            <a class="header__sub-link" href="">Desserts</a>
+                                        </li>
+                                        <li class="header__sub-item">
+                                            <a class="header__sub-link" href="">Leavened Products</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="header__nav-item">
+                                    <a href="./index.html" class="header__nav-link">
+                                        <span class="header__nav-icon header__nav-icon--clocke"></span>
+                                        Latest Recipes
+                                    </a>
+                                </li>
+                                <li class="header__nav-item">
+                                    <a href="./index.html" class="header__nav-link">
+                                        <span class="header__nav-icon header__nav-icon--arrow"></span>
+                                        IT Website
+                                    </a>
+                                </li>
+                        </ul>
+                    </nav>
+                    <div class="header__logo">
+                        <a href="./index.html" class="header__logo-link">
+                            <img width="168" height="44" src="./img/logo.svg" alt="logo">
+                        </a>
+                    </div>
                 </div>
-                <div class="header__menu-substrate"></div>
-                <nav class="header__nav">
-                    <ul class="header__nav-list">
-                            <li class="header__nav-item">
-                                <a href="./index.html" class="header__nav-link">
-                                    <span class="header__nav-icon header__nav-icon--home"></span>
-                                    Home
+                <div class="header__search">
+                    <form class="search-form">
+                        <input type="text" class="search-form__item" value placeholder="Search for a recipe">
+                        <input type="submit" value class="search-form__submit">
+                        <div class="search-form__result">
+                            <div class="search-form__result-str">
+                                <a href="" class="search-form__result-link">
+                                    Antipasti veloci
                                 </a>
-                            </li>
-                            <li class="header__nav-item header__sub-nav">
-                                <a href="./index.html" class="header__nav-link">
-                                    <span class="header__nav-icon header__nav-icon--arrow"></span>
-                                    Recipes
+                            </div>
+                            <div class="search-form__result-str">
+                                <a href="" class="search-form__result-link">
+                                    Pasta
                                 </a>
-                                <button class="header__sub-arrow"></button>
-                                <ul class="header__sub-list">
-                                    <li class="header__sub-item">
-                                        <a class="header__sub-link" href="./recipe-list.html">Appetizers</a>
-                                    </li>
-                                    <li class="header__sub-item">
-                                        <a class="header__sub-link" href="">First Courses</a>
-                                    </li>
-                                    <li class="header__sub-item">
-                                        <a class="header__sub-link" href="">Main Courses</a>
-                                    </li>
-                                    <li class="header__sub-item">
-                                        <a class="header__sub-link" href="">Desserts</a>
-                                    </li>
-                                    <li class="header__sub-item">
-                                        <a class="header__sub-link" href="">Leavened Products</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="header__nav-item">
-                                <a href="./index.html" class="header__nav-link">
-                                    <span class="header__nav-icon header__nav-icon--clocke"></span>
-                                    Latest Recipes
+                            </div>
+                            <div class="search-form__result-str">
+                                <a href="" class="search-form__result-link">
+                                    Marmellate
                                 </a>
-                            </li>
-                            <li class="header__nav-item">
-                                <a href="./index.html" class="header__nav-link">
-                                    <span class="header__nav-icon header__nav-icon--arrow"></span>
-                                    IT Website
+                            </div>
+                            <div class="search-form__result-str">
+                                <a href="" class="search-form__result-link">
+                                    Biscotti
                                 </a>
-                            </li>
-                    </ul>
-                </nav>
-                <div class="header__logo">
-                    <a href="./index.html" class="header__logo-link">
-                        <img width="168" height="44" src="./img/logo.svg" alt="logo">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="search__mobile">
+                    <button class="search__mobile-btn"></button>
+                </div>
+                <div class="header__sign-in">
+                    <a class="header__btn popup-btn--js" href="#popup-login">
+                        <span class="header__btn-name">Sign in</span>
                     </a>
                 </div>
-            </div>
-            <div class="header__search">
-                <form class="search-form">
-                    <input type="text" class="search-form__item" value placeholder="Search for a recipe">
-                    <input type="submit" value class="search-form__submit">
-                    <div class="search-form__result">
-                        <div class="search-form__result-str">
-                            <a href="" class="search-form__result-link">
-                                Antipasti veloci
-                            </a>
-                        </div>
-                        <div class="search-form__result-str">
-                            <a href="" class="search-form__result-link">
-                                Pasta
-                            </a>
-                        </div>
-                        <div class="search-form__result-str">
-                            <a href="" class="search-form__result-link">
-                                Marmellate
-                            </a>
-                        </div>
-                        <div class="search-form__result-str">
-                            <a href="" class="search-form__result-link">
-                                Biscotti
-                            </a>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="search__mobile">
-                <button class="search__mobile-btn"></button>
-            </div>
-            <div class="header__sign-in">
-                <a class="header__btn popup-btn--js" href="#popup-login">
-                    <span class="header__btn-text">Sign in</span>
-                    <span class="header__btn-icon"></span>
-                </a>
             </div>
         </header>
         <section class="slider-main swiper-container">
@@ -934,12 +935,12 @@
                 <form class="popup__form" name="popup__form" action="#" method="post">
                     <div class="popup__form-group">
                         <label class="popup__form-label"> Your Email
-                        <input class="popup__form-input" type="text" required>
+                        <input class="popup__form-input" type="text" autocomplete="email" required>
                         </label>
                     </div>
                     <div class="popup__form-group">
                         <label class="popup__form-label popup__password-show"> Your password
-                        <input class="popup__form-input popup__password-input" type="password" id="pass-login" required suggested: "current-password">
+                        <input class="popup__form-input popup__password-input" type="password" id="pass-login" required autocomplete="current-password">
                         <div class="popup__form-show-password" data-target="#pass-login">
                         </div>
                     </label>
@@ -980,18 +981,18 @@
                 <form class="popup__form" name="popup__form" action="#" method="post">
                     <div class="popup__form-group">
                         <label class="popup__form-label"> You are registering with email*
-                        <input class="popup__form-input" type="text" required>
+                        <input class="popup__form-input" type="text" required autocomplete="email">
                         </label>
                     </div>
                     <div class="popup__form-group">
                         <label class="popup__form-label popup__password-show">Enter password*
-                        <input class="popup__form-input popup__password-input" id="pass-submit" type="password" required suggested: "current-password">
+                        <input class="popup__form-input popup__password-input" id="pass-submit" type="password" required autocomplete="new-password">
                         <div class="popup__form-show-password" data-target="#pass-submit"></div>
                         </label>
                     </div>
                     <div class="popup__form-group">
                         <label class="popup__form-label popup__password-show">Confirm password*
-                        <input class="popup__form-input popup__password-input" id="pass-confirm" type="password" required suggested: "current-password">
+                        <input class="popup__form-input popup__password-input" id="pass-confirm" type="password" required autocomplete="new-password">
                         <div class="popup__form-show-password" data-target="#pass-confirm"></div>
                         </label>
                     </div>

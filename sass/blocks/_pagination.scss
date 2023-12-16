@@ -1,0 +1,34 @@
+.pagination{
+    &__list{
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    &__item{
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        color: $text-color;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 2.75;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover{
+            border: 1px $orange solid;
+            border-radius: 50%;
+        }
+        &--active{
+            background-color: #fff;
+        }
+    }
+    &__arrow-prev{
+        background: url(../img/pag-arrow-prev.svg) no-repeat;
+    }
+    &__arrow-next{
+        background: url(../../img/pag-arrow-next.svg) no-repeat;
+    }
+}

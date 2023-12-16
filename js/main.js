@@ -79,11 +79,7 @@ function bodyLock(){
     if (lockPadding.length > 0) {
         for (let index = 0; index < lockPadding.length; index++) {
             const el = lockPadding[index];
-            const rightPaddingEl = window.getComputedStyle(el).getPropertyValue("padding-right");
-            const additionalPadding = parseFloat(rightPaddingEl.replace('px', ''));
-            el.style.paddingRight = additionalPadding + lockPaddingValue +'px';
-            console.log(rightPaddingEl)
-            console.log(el.style.paddingRight)
+            el.style.paddingRight = '0px';
         }
     }
     document.body.style.paddingRight = lockPaddingValue + 'px';
@@ -98,10 +94,7 @@ function bodyUnLock() {
         if (lockPadding.length > 0) {
             for (let index = 0; index < lockPadding.length; index++) {
                 const el = lockPadding[index];
-                const rightPaddingEl = window.getComputedStyle(el).getPropertyValue("padding-right");
-                const additionalPadding = parseFloat(rightPaddingEl.replace('px', ''));
-                el.style.paddingRight = (additionalPadding - lockPaddingValue) + 'px';
-                console.log(el.style.paddingRight)
+                el.style.paddingRight = '0px';
             }
         }
        document.body.style.paddingRight = '0px';
@@ -250,7 +243,7 @@ let sliderSmallFirst = new Swiper ('.recipe-slider-1',{
             slidesPerView: 3,
             spaceBetween: 20,
           },
-        1161:{
+        1171:{
             spaceBetween: 28,
             slidesPerView: 4,
         },
@@ -275,9 +268,19 @@ let sliderSmallSecond = new Swiper ('.recipe-slider-2',{
             slidesPerView: 3,
             spaceBetween: 20,
           },
-        1161:{
+        1171:{
             spaceBetween: 28,
             slidesPerView: 4,
         },
     }
+});
+
+/*-----------Favorite------------ */
+
+const btnFavorites = document.querySelectorAll('.recipe-list__card-btn-like');
+
+btnFavorites.forEach(btnFavorite => {
+    btnFavorite.addEventListener('click', function(){
+        btnFavorite.classList.toggle('recipe-list__card-btn-like--active');
+    });
 });
