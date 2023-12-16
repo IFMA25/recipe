@@ -21,13 +21,21 @@
         }
     }
 }
-@media (max-width:1160px){
+@media (max-width:1170px){
     .card{
         width: calc(100% / 3 - 20px);
         margin-right: 20px;
     }
     .recipe-block__container{
        margin-right: -20px;
+    }
+    .recipe-list__container{
+        flex-direction: column-reverse;
+    }
+    .banner{
+        width: 100%;
+        height: 170px;
+        margin-bottom: 20px;
     }
 }
 @media (max-width:920px){
@@ -39,11 +47,6 @@
             text-align: center;
         }
     }
-    .banner{
-        width: 100%;
-        height: 170px;
-        margin-bottom: 20px;
-    }
     .recipe-proposition{
         grid-template-areas:
         "banner banner"
@@ -52,6 +55,9 @@
     }
     .card{
         width: calc(100% / 2 - 20px);
+    }
+    .recipe-list__wrapper{
+        padding-right: 0;
     }
 }
 @media (max-width:768px){
@@ -65,17 +71,20 @@
         &__menu{
             margin-right: 10px;
         }
-        &__sign-in{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2px;
-            border-radius: 50%;
-            background-color: $orange;
-        }
         &__btn{
-            font-size: 0;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
             padding: 0;
+        }
+        &__btn-name{
+            font-size: 0;
+            &::before{
+                width: 44px;
+                height: 44px;
+                left: 2px;
+                bottom: calc(100% - 30px);
+            }
         }
     }
     .search__mobile{
@@ -122,6 +131,14 @@
     .slider-main__slide{
         column-gap: 20px;
     }
+    .recipe-list__card{
+        &-desc{
+            font-size: 12px;
+        }
+        &-inner{
+            padding: 15px;
+        }
+    }
 }
 @media (max-width:625px){
     .popup__body{
@@ -145,7 +162,15 @@
          &__btn-next{
             right: calc(50% - 50px);
          }
-     }
+    }
+    .recipe-list__card{
+        &-img{
+            width: 100%;
+        }
+        &-inner{
+            width: 100%;
+        }
+    }
 }
 
 @media (max-width:550px){
@@ -154,8 +179,8 @@
             font-size: 18px;
         }
     }
-    .header{
-        padding: 10px 15px;
+    .header__container{
+        padding: 10px 15px 5px 10px;
     }
     .popup__body{
         position: relative;
@@ -210,11 +235,16 @@
             margin-bottom: 10px;
         }
     }
+    .pagination__item{
+        &:nth-child(6), &:nth-child(5){
+            display: none;
+        }
+    }
 }
 @media (max-width:440px){
     .header{
         &__logo{
-            @include adaptiv-value("width", 168, 100, 1);
+            @include adaptiv-value("width", 168, 135, 1);
         }
         &__menu{
             margin-right: 5px;
@@ -236,6 +266,11 @@
         margin-bottom: 15px;
         font-size: 22px;
     }
+    .pagination__item{
+        &:nth-child(4), &:nth-child(8){
+            display: none;
+        }
+    }
 }
 
 @media (max-width:380px){
@@ -250,14 +285,16 @@
             height: 30px;
         }
     }
-    .header__sign-in{
+    .header__btn{
         width: 40px;
         height: 40px;
     }
-    .header__btn-icon{
-        width: 36px;
-        height: 36px;
-    }
+   .header__btn-name::before{
+        width: 40px;
+        height: 40px;
+        left: 0;
+        bottom: -24px;
+   }
     .header__inner{
         margin-right: 10px;
     }
@@ -287,6 +324,20 @@
         text-align: center;
         padding-right: 0;
     }
+    .recipe-list__card{
+        &-footer{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &-read{
+            margin-top: 10px;
+        }
 
+    }
+    .pagination__item{
+        &:nth-child(9){
+            display: none;
+        }
+    }
 }
 
