@@ -52,7 +52,7 @@
                 position: absolute;
                 top: 0;
                 right: 0;
-                background: url(../../img/icon-card-heart-active.svg) no-repeat;
+                background: url(../img/icon-card-heart-active.svg) no-repeat;
                 background-size: 24px auto;
                 background-position: top 50% right 50%;
                 content: '';
@@ -146,8 +146,6 @@
             }
         }
         &-read{
-            background: no-repeat url(../img/stroke-reade.svg);
-            background-position:right 0 top 50%;
             &-link{
                 display: block;
                 text-decoration: none;
@@ -157,6 +155,8 @@
                 line-height: 1.636363636363636;
                 text-transform: uppercase;
                 padding-right: 17px;
+                background: no-repeat url(../img/stroke-reade.svg);
+                background-position:right 0 top 50%;
                 &:hover{
                     color: $orange;
                     text-decoration: underline;

@@ -1564,7 +1564,7 @@ template {
   position: absolute;
   top: 0;
   right: 0;
-  background: url(../../img/icon-card-heart-active.svg) no-repeat;
+  background: url(../img/icon-card-heart-active.svg) no-repeat;
   background-size: 24px auto;
   background-position: top 50% right 50%;
   content: "";
@@ -1659,10 +1659,6 @@ template {
 .recipe-list__card-text:last-child {
   margin-right: 0;
 }
-.recipe-list__card-read {
-  background: no-repeat url(../img/stroke-reade.svg);
-  background-position: right 0 top 50%;
-}
 .recipe-list__card-read-link {
   display: block;
   text-decoration: none;
@@ -1672,6 +1668,8 @@ template {
   line-height: 1.6363636364;
   text-transform: uppercase;
   padding-right: 17px;
+  background: no-repeat url(../img/stroke-reade.svg);
+  background-position: right 0 top 50%;
 }
 .recipe-list__card-read-link:hover {
   color: #FF9614;
