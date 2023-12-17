@@ -31,6 +31,11 @@
         display: flex;
         padding: 10px 20px;
         &-icon{
+            color: #978FA1;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.5;
+            padding-left: 25px;
             margin-right: 17px;
             &:last-child{
                 margin-right: 0;
@@ -40,19 +45,6 @@
             }
             &--time{
                 background: url(../img/tempo-grey.svg) no-repeat;
-            }
-        }
-
-        &-text{
-            display: block;
-            color: #978FA1;
-            font-size: 12px;
-            font-weight: 600;
-            line-height: 1.5;
-            margin: 0;
-            padding-left: 25px;
-        &:last-child{
-            margin-right: 0;
             }
         }
     }

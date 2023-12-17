@@ -34,7 +34,7 @@
         display: grid;
         grid-template-areas:
         "title title"
-        "content banner";
+        "content aside";
         grid-template-columns: 1fr;
     &__title{
         margin-bottom: 20px;

@@ -280,8 +280,23 @@ let sliderSmallSecond = new Swiper ('.recipe-slider-2',{
 
 const btnFavorites = document.querySelectorAll('.recipe-list__card-btn-like');
 
+function isTouchDevice() {
+    return 'ontouchstart' in window || navigator.maxTouchPoints;
+}
+
 btnFavorites.forEach(btnFavorite => {
-    btnFavorite.addEventListener('click', function(){
-        btnFavorite.classList.toggle('recipe-list__card-btn-like--active');
+    btnFavorite.addEventListener('click', function(event){
+        if (isTouchDevice()) {
+            event.preventDefault(); // Отменяем стандартное действие, чтобы избежать перехода по ссылке или выполнения других действий по умолчанию
+            
+            btnFavorite.classList.toggle('recipe-list__card-btn-like--active');
+        } else {
+            btnFavorite.classList.toggle('recipe-list__card-btn-like--active');
+        }
     });
 });
+
+
+
+
+
