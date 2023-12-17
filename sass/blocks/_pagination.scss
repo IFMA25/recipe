@@ -1,4 +1,5 @@
 .pagination{
+    grid-area: pagination;
     &__list{
         display: flex;
         justify-content: center;
@@ -6,7 +7,8 @@
         padding: 0;
         margin: 0;
     }
-    &__item{
+    &__link{
+        display: block;
         width: 44px;
         height: 44px;
         border-radius: 50%;
@@ -14,21 +16,44 @@
         text-align: center;
         font-size: 16px;
         font-weight: 700;
-        line-height: 2.75;
+        line-height: 2.7;
         text-transform: uppercase;
-        cursor: pointer;
-        &:hover{
-            border: 1px $orange solid;
-            border-radius: 50%;
-        }
+        border: 1px transparent solid;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    &__item{
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
         &--active{
             background-color: #fff;
         }
     }
+    &__numb{
+        &:hover{
+            background-color: #fff;
+            border: 1px $orange solid;
+            border-radius: 50%;
+            color: $text-color;
+        }
+    }
+    &__dots:hover{
+        color: $text-color;
+        cursor: default;
+    }
     &__arrow-prev{
         background: url(../img/pag-arrow-prev.svg) no-repeat;
+        &:hover{
+            border: 1px $orange solid;
+            border-radius: 50%;
+        }
     }
     &__arrow-next{
         background: url(../img/pag-arrow-next.svg) no-repeat;
+        &:hover{
+            border: 1px $orange solid;
+            border-radius: 50%;
+        }
     }
 }

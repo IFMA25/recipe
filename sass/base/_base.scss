@@ -46,11 +46,11 @@
             border-radius: 2px;
         }
 }
-.banner{
-    width: 300px;
-    height: 270px;
-    border: 1px #000 solid;
-    background-color: #E8E8E8;
-    grid-area: banner;
-    justify-self: end;
+.aside{
+    grid-area: aside;
+    &__banner{
+        min-height: 270px;
+        border: 1px #000 solid;
+        background-color: #E8E8E8;
+    }
 }

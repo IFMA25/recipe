@@ -1,3 +1,15 @@
+@media (hover: none){
+    .recipe-list__card-btn-like--active{
+        background: url(../img/icon-card-heart.svg) no-repeat, url(../../img/icon-card-heart-active.svg)  no-repeat !important;
+        background-size: 24px auto !important;
+        background-position: top 50% right 50% !important;
+    }
+    .recipe-list__card-btn-like:not(.recipe-list__card-btn-like--active):hover{
+        background: url(../img/icon-card-heart.svg) no-repeat !important;
+        background-size: 24px auto !important;
+        background-position: top 50% right 50% !important;
+    }
+}
 @media (max-width:1200px){
     .footer{
         &__container{
@@ -30,12 +42,18 @@
        margin-right: -20px;
     }
     .recipe-list__container{
-        flex-direction: column-reverse;
+        grid-template-areas:
+        "aside aside"
+        "recipe-list__title recipe-list__title"
+        "recipe-list__inner recipe-list__inner"
+        "pagination pagination";
     }
-    .banner{
+    .recipe-list__inner{
+        padding-right: 0;
+    }
+    .aside{
+        margin-bottom: 30px;
         width: 100%;
-        height: 170px;
-        margin-bottom: 20px;
     }
 }
 @media (max-width:920px){
@@ -49,15 +67,12 @@
     }
     .recipe-proposition{
         grid-template-areas:
-        "banner banner"
+        "aside aside"
         "title title"
         "content content";
     }
     .card{
         width: calc(100% / 2 - 20px);
-    }
-    .recipe-list__wrapper{
-        padding-right: 0;
     }
 }
 @media (max-width:768px){
@@ -131,13 +146,11 @@
     .slider-main__slide{
         column-gap: 20px;
     }
-    .recipe-list__card{
-        &-desc{
-            font-size: 12px;
-        }
-        &-inner{
-            padding: 15px;
-        }
+    .recipe-list__card-inner{
+        padding: 15px;
+    }
+    .recipe-list__card-desc{
+        font-size: 12px;
     }
 }
 @media (max-width:625px){
@@ -163,17 +176,18 @@
             right: calc(50% - 50px);
          }
     }
-    .recipe-list__card{
-        &-img{
-            width: 100%;
-        }
-        &-inner{
-            width: 100%;
-        }
+    .recipe-list__card-img, .recipe-list__card-inner{
+        width: 100%;
+    }
+    .recipe-list__card-desc{
+        font-size: 14px;
     }
 }
 
 @media (max-width:550px){
+    .wrapper{
+        padding-top: 65px;
+    }
     .recipe-proposition{
         &__title-link{
             font-size: 18px;
@@ -235,10 +249,13 @@
             margin-bottom: 10px;
         }
     }
+    .pagination__list{
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
     .pagination__item{
-        &:nth-child(6), &:nth-child(5){
-            display: none;
-        }
+        width: 40px;
+        height: 40px;
     }
 }
 @media (max-width:440px){
@@ -265,11 +282,6 @@
     .recipe__title{
         margin-bottom: 15px;
         font-size: 22px;
-    }
-    .pagination__item{
-        &:nth-child(4), &:nth-child(8){
-            display: none;
-        }
     }
 }
 
@@ -323,21 +335,6 @@
         width: 100%;
         text-align: center;
         padding-right: 0;
-    }
-    .recipe-list__card{
-        &-footer{
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        &-read{
-            margin-top: 10px;
-        }
-
-    }
-    .pagination__item{
-        &:nth-child(9){
-            display: none;
-        }
     }
 }
 
