@@ -8,7 +8,7 @@
         grid-template-areas:
         "recipe-list__title aside"
         "recipe-list__inner aside"
-        "pagination pagination";
+        "pagination aside";
     }
     &__inner{
         padding-right: 40px;
@@ -53,12 +53,12 @@
             border: none;
             padding: 0;
             &:hover:not(.recipe-list__card-btn-like--active){
-                background: url(../img/icon-card-heart.svg) no-repeat, url(../../img/icon-card-heart-active.svg) no-repeat;
+                background: url(../img/icon-card-heart.svg) no-repeat, url(../img/icon-card-heart-active.svg) no-repeat;
                 background-size: 24px auto;
                 background-position: top 50% right 50%;
             }
             &--active{
-                background: url(../img/icon-card-heart.svg) no-repeat, url(../../img/icon-card-heart-active.svg) no-repeat ;
+                background: url(../img/icon-card-heart.svg) no-repeat, url(../img/icon-card-heart-active.svg) no-repeat ;
                 background-size: 24px auto ;
                 background-position: top 50% right 50% ;
             }
