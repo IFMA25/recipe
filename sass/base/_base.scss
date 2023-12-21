@@ -17,8 +17,8 @@
     }
 .main{
     min-width: 0;
-    background-color: $body-bg;
-    padding-bottom: 40px;
+    //background-color: $body-bg;
+   // padding-bottom: 40px;
 }
 .text {
     font-size: 16px;
@@ -47,10 +47,31 @@
         }
 }
 .aside{
+    width: calc(300px * 100% / 1140px);
     grid-area: aside;
     &__banner{
         min-height: 270px;
         border: 1px #000 solid;
         background-color: #E8E8E8;
+    }
+}
+.recipe-info{
+    display: flex;
+    &__icon{
+        color: #978FA1;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.5;
+        padding-left: 23px;
+        margin-right: 17px;
+        &:last-child{
+            margin-right: 0;
+        }
+        &--cap{
+            background: url(../img/difficolta-grey.svg) no-repeat;
+        }
+        &--time{
+            background: url(../img/tempo-grey.svg) no-repeat;
+        }
     }
 }

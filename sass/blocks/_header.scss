@@ -1,16 +1,19 @@
 .header{
-    position: fixed; 
+    position: fixed;
     top: 0;
     width: 100%;
     height: auto;
     background-color: #fff;
     border-bottom: 1px #E6E6E6 solid;
     z-index: 1000;
-        &__container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 30px 10px 20px;
+    &--page-instruction{
+        background-color: #fff;
+    }
+    &__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px 10px 20px;
     }
     &__inner{
         display: flex;
