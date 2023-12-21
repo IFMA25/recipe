@@ -8,7 +8,7 @@
         padding: 0;
         margin: 0;
     }
-    &__link{
+    &__btn{
         display: block;
         width: 44px;
         height: 44px;
@@ -22,6 +22,25 @@
         border: 1px transparent solid;
         text-decoration: none;
         transition: all 0.3s ease;
+        &--numb{
+            &:hover{
+                background-color: #fff;
+                border-color: $orange;
+                color: $text-color;
+            }
+        }
+        &--arrow-prev{
+            background: url(../img/pag-arrow-prev.svg) no-repeat;
+            &:hover{
+                border-color: $orange;
+            }
+        }
+        &--arrow-next{
+            background: url(../img/pag-arrow-next.svg) no-repeat;
+            &:hover{
+                border-color: $orange;
+            }
+        }
     }
     &__item{
         width: 44px;
@@ -30,31 +49,14 @@
         &--active{
             background-color: #fff;
         }
-    }
-    &__numb{
-        &:hover{
-            background-color: #fff;
-            border: 1px $orange solid;
-            border-radius: 50%;
+        &--dots{
+            width: 44px;
+            height: 44px;
             color: $text-color;
-        }
-    }
-    &__dots:hover{
-        color: $text-color;
-        cursor: default;
-    }
-    &__arrow-prev{
-        background: url(../img/pag-arrow-prev.svg) no-repeat;
-        &:hover{
-            border: 1px $orange solid;
-            border-radius: 50%;
-        }
-    }
-    &__arrow-next{
-        background: url(../img/pag-arrow-next.svg) no-repeat;
-        &:hover{
-            border: 1px $orange solid;
-            border-radius: 50%;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 2.7;
         }
     }
 }
