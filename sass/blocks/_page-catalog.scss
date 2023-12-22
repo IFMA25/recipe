@@ -14,8 +14,12 @@
     margin-bottom: 30px;
 }
 .recipe-list{
+    padding-bottom: 30px;
     &__item{
         margin-bottom: 30px;
+        &:last-child{
+            margin-bottom: 0;
+        }
     }
 }
 .recipe-card{
@@ -24,7 +28,6 @@
     border-radius: 5px;
     background-color: #fff;
     overflow: hidden;
-    margin-bottom: 30px;
     &__img{
         position: relative;
         width: calc(292px * 100% / 800px);
@@ -128,7 +131,6 @@
         position: relative;
         width: 38px;
         height: 38px;
-        display: block;
         background: url(../img/icon-card-heart.svg) no-repeat;
         background-position: top 50% right 50%;
         border: none;

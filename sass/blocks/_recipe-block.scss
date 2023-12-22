@@ -1,45 +1,15 @@
-.recipe{
-    &__header{
-        display: flex;
-        justify-content: space-between;
-    }
+.recipe-main{
+    background-color: #F7F6F8;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+.recipe-proposition{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
     &__title{
-        margin-bottom: 30px;
-        text-transform: uppercase;
-        padding-right: 100px;
-        padding-top: 10px;
-    }
-    &__view-all{
-        padding-top: 10px;
-        margin-bottom: 30px;
-    }
-    &__view-btn{
-        display: inline-block;
-        border-radius: 40px;
-        border: 1px solid #E9E5EE;
-        padding: 10px 20px;
-        text-decoration: none;
-        color:#444;
-        background: #FFF;
-        font-size: 13px;
-        font-weight: 700;
-        line-height: 1.384615384615385;
-        &:hover {
-            color: $orange;
-            border: 1px solid $orange;
-            box-shadow: 0px 0px 5px 6px rgba(255, 150, 20, 0.2);
-        }
-    }
-    &-proposition{
-        padding-top: 30px;
-        display: grid;
-        grid-template-areas:
-        "title title"
-        "content aside";
-        grid-template-columns: 1fr;
-    &__title{
+        width: 100%;
         margin-bottom: 20px;
-        grid-area: title;
         text-transform: uppercase;
         &-link{
             position: relative;
@@ -62,15 +32,15 @@
             &:hover{
                 color: $violet;
                 &.recipe-proposition__title-link::before{
-                    width: 100%;
-                    transition: width 0.3s ease;
-                }
+                width: 100%;
+                transition: width 0.3s ease;
             }
+        }
         }
     }
     &__wrapper{
+        width: calc(810px * 100% / 1140px);
         display: flex;
-        grid-area: content;
         flex-wrap: wrap;
     }
     &__inner{
@@ -101,23 +71,36 @@
             transition: color 0.3s ease;
         }
     }
+}
+.recipe-block{
+    padding-bottom: 30px;
+    &__container{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        margin-right: -28px;
     }
-    &-slider{
-        padding-top: 30px;
-        &__title {
-            text-transform: uppercase;
-        }
-        &__header{
-            padding-right: 130px;
-        }
+    &__header{
+        display: flex;
+        justify-content: space-between;
     }
-    &-block{
-        padding-top: 30px;
-        &__container{
-            display: flex;
-            flex-wrap: wrap;
-            row-gap: 20px;
-            margin-right: -28px;
-        }
+    &__title{
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        padding-right: 100px;
+        padding-top: 10px;
+    }
+}
+.recipe-slider{
+    padding-bottom: 30px;
+    &__title {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        padding-top: 10px;
+    }
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        padding-right: 130px;
     }
 }

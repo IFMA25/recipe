@@ -279,10 +279,16 @@ let sliderSmallSecond = new Swiper ('.recipe-slider-2',{
 /*-----------Favorite------------ */
 
 const btnFavorites = document.querySelectorAll('.recipe-like__btn');
+const btnLikeCard = document.querySelectorAll('.upper-card__like-btn');
 
 btnFavorites.forEach(btnFavorite => {
     btnFavorite.addEventListener('click', function(event){
             btnFavorite.classList.toggle('recipe-like__btn--active');
+    });
+});
+btnLikeCard.forEach(btnLikeCard => {
+    btnLikeCard.addEventListener('click', function(event){
+        btnLikeCard.classList.toggle('upper-card__like-btn--active');
     });
 });
 

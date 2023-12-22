@@ -17,8 +17,6 @@
     }
 .main{
     min-width: 0;
-    //background-color: $body-bg;
-   // padding-bottom: 40px;
 }
 .text {
     font-size: 16px;
@@ -48,7 +46,6 @@
 }
 .aside{
     width: calc(300px * 100% / 1140px);
-    grid-area: aside;
     &__banner{
         min-height: 270px;
         border: 1px #000 solid;
