@@ -26,6 +26,9 @@
         width: calc(100% / 3 - 20px);
         margin-right: 20px;
     }
+    .recipe-proposition__wrapper{
+        width: 100%;
+    }
     .recipe-block__container{
        margin-right: -20px;
     }
@@ -55,12 +58,6 @@
             margin-right: 0;
             text-align: center;
         }
-    }
-    .recipe-proposition{
-        grid-template-areas:
-        "aside aside"
-        "title title"
-        "content content";
     }
     .card{
         width: calc(100% / 2 - 20px);
@@ -140,17 +137,14 @@
    .recipe-card__inner{
     padding: 10px 15px;
    }
+   .recipe-proposition__link{
+    font-size: 14px;
+}
 }
 @media (max-width:625px){
     .popup__body{
         @include adaptiv-value('padding-left', 100, 20, 1);
         @include adaptiv-value('padding-right', 100, 20, 1);
-    }
-    .recipe-proposition__link{
-        font-size: 14px;
-    }
-    .recipe__title{
-        padding-right: 0;
     }
     .slider-small{
         padding-bottom: 70px;
@@ -172,6 +166,9 @@
         &__inner{
             width: 100%;
         }
+    }
+    .recipe-slider__header{
+        padding-right: 0;
     }
 }
 
@@ -228,12 +225,6 @@
         flex-direction: column;
         padding-bottom: 15px;
     }
-    .recipe__view-all{
-        padding-top: 0;
-    }
-    .recipe__title{
-        margin-bottom: 10px;
-    }
     .footer{
         &__nav-item{
             width: 50%;
@@ -250,6 +241,9 @@
     }
 }
 @media (max-width:440px){
+    .section-title{
+        font-size: 24px
+    }
     .header{
         &__logo{
             @include adaptiv-value("width", 168, 135, 1);
@@ -267,12 +261,12 @@
             }
 
     }
-    .recipe__view-btn{
-        padding: 11px 32px;
+    .recipe-slider__header, .recipe-block__header{
+        flex-direction: column;
     }
-    .recipe__title{
-        margin-bottom: 15px;
-        font-size: 22px;
+    .view-all, .recipe-block__title, .recipe-slider__title{
+        margin-bottom: 10px;
+        padding-top: 0;
     }
 }
 
@@ -324,7 +318,6 @@
     }
     .recipe-proposition__inner{
         width: 100%;
-        text-align: center;
         padding-right: 0;
     }
     .recipe-card__footer{
