@@ -292,6 +292,58 @@ btnLikeCard.forEach(btnLikeCard => {
     });
 });
 
+/*-----------Raiting------------------*/
+
+const rate = document.querySelectorAll('.rate');
+
+if (rate.length > 0){
+    console.log('рейтингов');
+    initRate();
+}
+
+function initRate(){
+    let rateActive, rateValue;
+    for(let index = 0; index < rate.length; index++){
+        const rating = rate[index];
+        initRate(rating);
+    }
+
+    function initRate(rating){
+        initRateVar(rating);
+        setRateActiveWidth();
+        if (rating.classList.contains('rate--set')){
+            setRate(rating);
+        }
+    }
+
+    function initRateVar(rating){
+        rateActive = rating.querySelector('.rate__active');
+        rateValue = rating.querySelector('.rate-value--js');
+    }
+
+    function setRateActiveWidth(index = rateValue.innerHTML){
+        const rateActiveWidth = index / 0.05;
+        rateActive.style.width = `${rateActiveWidth}%`;
+    }
+
+    function setRate(rating) {
+        const rateItem = rating.querySelectorAll('.rate__star');
+        for (let index = 0; index < rateItem.length; index++){
+            const rateInput = rateItem[index];
+            rateInput.addEventListener("mouseenter", function(e){
+                initRateVar(rating);
+                setRateActiveWidth(rateInput.value);
+            });
+            rateInput.addEventListener("mouseleave", function(e){
+                setRateActiveWidth();
+            });
+            rateInput.addEventListener("click", function(e){
+                rateValue.innerHTML = index + 1;
+                setRateActiveWidth();
+            });
+        }
+    }
+}
 
 
 
