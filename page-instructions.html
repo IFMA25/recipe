@@ -113,12 +113,24 @@
                     <div class="upper-block__category">
                         <a href="#" class="upper-block__category-link">Appetizers</a>
                     </div>
-                    <div class="upper-block__rate">
-                        <div class="upper-block__rate-item"></div>
-                        <div class="upper-block__rate-vote">
-                            <button class="upper-block__rate-btn">Vote</button>
+                    <form action="#" class="rate-form">
+                        <div class="rate-form__item">
+                            <div class="rate rate--set">
+                                <div class="rate__body">
+                                    <div class="rate__active"></div>
+                                    <div class="rate__item">
+                                        <input type="radio" class="rate__star" value="1">
+                                        <input type="radio" class="rate__star" value="2">
+                                        <input type="radio" class="rate__star" value="3">
+                                        <input type="radio" class="rate__star" value="4">
+                                        <input type="radio" class="rate__star" value="5">
+                                    </div>
+                                    <div class="rate-value--js">0</div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                        <button type="submit" class="rate-btn">Vote</button>
+                    </form>
                 </div>
                 <div class="upper-block__title">
                     Eggs Benedict with passion fruit hollandaise
@@ -133,7 +145,7 @@
                                 <a href="#" class="upper-card__category-link">Vegetarian</a>
                             </div>
                             <div class="upper-card__action">
-                                <div class="upper-card__rate"></div>
+                                
                                 <div class="upper-card__like">
                                     <button class="upper-card__like-btn"></button>
                                 </div>
