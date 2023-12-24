@@ -302,7 +302,8 @@ if (rate.length > 0){
 }
 
 function initRate(){
-    let rateActive, rateValue;
+    let rateActive;
+    let rateValue;
     for(let index = 0; index < rate.length; index++){
         const rating = rate[index];
         initRate(rating);

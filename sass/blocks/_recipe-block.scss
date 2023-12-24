@@ -11,6 +11,7 @@
         width: 100%;
         margin-bottom: 20px;
         text-transform: uppercase;
+        order: 2;
         &-link{
             position: relative;
             display: inline-block;
@@ -42,6 +43,7 @@
         width: calc(810px * 100% / 1140px);
         display: flex;
         flex-wrap: wrap;
+        order: 3;
     }
     &__inner{
         width: calc(100% / 3);
