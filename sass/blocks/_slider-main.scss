@@ -23,13 +23,8 @@
         &-item{
             position: relative;
             overflow: hidden;
-            & .slider-main__slide-img{
-                transform: scale(1.1);
-                transition: transform 0.5s ease;
-                height: 100%;
-                &:hover{
-                    transform: scale(1);
-                }
+        &-img{
+            overflow: hidden;
             }
             &--1{
                 max-width: 360px;
@@ -50,6 +45,14 @@
         }
         &-link{
             display: block;
+            & .slider-main__slide-img{
+                transform: scale(1.1);
+                transition: transform 0.5s ease;
+                height: 100%;
+            }
+            &:hover .slider-main__slide-img{
+                transform: scale(1);
+            }
         }
         &-text{
             position: absolute;

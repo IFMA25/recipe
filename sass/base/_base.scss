@@ -46,6 +46,7 @@
 }
 .aside{
     width: calc(300px * 100% / 1140px);
+    order: 1;
     &__banner{
         min-height: 270px;
         border: 1px #000 solid;
