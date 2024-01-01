@@ -15,9 +15,6 @@
     padding-right: 15px;
     padding-left: 15px;
     }
-.main{
-    min-width: 0;
-}
 .text {
     font-size: 16px;
     font-style: normal;
@@ -43,15 +40,6 @@
             left: 0;
             border-radius: 2px;
         }
-}
-.aside{
-    width: calc(300px * 100% / 1140px);
-    order: 1;
-    &__banner{
-        min-height: 270px;
-        border: 1px #000 solid;
-        background-color: #E8E8E8;
-    }
 }
 .recipe-info{
     display: flex;
