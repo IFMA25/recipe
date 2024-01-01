@@ -37,26 +37,27 @@
     }
     .catalog{
         &__container{
-            flex-direction: column-reverse;
             flex-wrap: wrap;
         }
         &__main{
             width: 100%;
         }
     }
-    .aside{
-        width: 100%;
-        margin-bottom: 40px;
-    }
-    .recipe__container, .similar__container{
-        flex-direction: column-reverse;
-    }
     .recipe__main{
         width: 100%;
         padding-right: 0;
     }
-    .similar-block{
+    .similar__block{
         width: 100%;
+    }
+    .recipe-proposition__aside{
+        width: 100%;
+        margin-top: 40px;
+    }
+    .catalog__aside, .similar__aside, .recipe__aside{
+        width: 100%;
+        margin-bottom: 40px;
+        margin-left: 0;
     }
 
 }
@@ -165,6 +166,9 @@
         &__inner{
             width: 100%;
         }
+    }
+    .catalog__aside, .similar__aside{
+        margin-bottom: 20px;
     }
 }
 @media (max-width:625px){
@@ -361,6 +365,7 @@
     .recipe-card__footer{
         flex-direction: column;
         row-gap: 10px;
+        align-items: flex-start;
     }
     .upper-card__item, .ingredients__item{
         font-size: 12px;

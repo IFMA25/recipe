@@ -5,13 +5,13 @@
 }
 .recipe-proposition{
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding-bottom: 30px;
     &__title{
         width: 100%;
         margin-bottom: 20px;
         text-transform: uppercase;
-        order: 2;
         &-link{
             position: relative;
             display: inline-block;
@@ -43,7 +43,6 @@
         width: calc(810px * 100% / 1140px);
         display: flex;
         flex-wrap: wrap;
-        order: 3;
     }
     &__inner{
         width: calc(100% / 3);
@@ -59,6 +58,9 @@
     &__item{
         list-style: none;
         margin-bottom: 10px;
+        &:last-child{
+            margin-bottom: 0;
+        }
     }
     &__link{
         display: block;
@@ -72,6 +74,9 @@
             color: $orange;
             transition: color 0.3s ease;
         }
+    }
+    &__aside{
+        width: calc(300px * 100% / 1140px);
     }
 }
 .recipe-block{
