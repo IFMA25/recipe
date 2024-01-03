@@ -81,9 +81,6 @@
     .search-form{
         display: none;
     }
-    .header__search--open .search-form{
-        display: block;
-    }
     .header{
         &__menu{
             margin-right: 10px;
@@ -196,12 +193,24 @@
         &__inner{
             width: 100%;
         }
+        &__info{
+            margin-bottom: 15px;
+        }
     }
     .recipe-slider__header{
         padding-right: 0;
     }
     .ingredients__item{
         width: 100%;
+    }
+    .recipe-list{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        margin-right: -20px;
+        &__item{
+            width: calc(50% - 20px);
+        }
     }
 }
 
@@ -306,6 +315,12 @@
     }
     .upper-card__category{
         margin-bottom: 15px;
+    }
+    .recipe-list{
+        margin-right: 0;
+        &__item{
+            width: 100%;
+        }
     }
 }
 

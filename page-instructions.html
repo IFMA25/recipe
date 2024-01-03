@@ -73,28 +73,6 @@
                  <form class="search-form">
                      <input type="text" class="search-form__item" value placeholder="Search for a recipe">
                      <input type="submit" value class="search-form__submit">
-                     <div class="search-form__result">
-                         <div class="search-form__result-str">
-                             <a href="#" class="search-form__result-link">
-                                 Antipasti veloci
-                             </a>
-                         </div>
-                         <div class="search-form__result-str">
-                             <a href="#" class="search-form__result-link">
-                                 Pasta
-                             </a>
-                         </div>
-                         <div class="search-form__result-str">
-                             <a href="#" class="search-form__result-link">
-                                 Marmellate
-                             </a>
-                         </div>
-                         <div class="search-form__result-str">
-                             <a href="#" class="search-form__result-link">
-                                 Biscotti
-                             </a>
-                         </div>
-                     </div>
                  </form>
              </div>
              <div class="search__mobile">
@@ -111,22 +89,21 @@
             <div class="container upper-block__container">
                     <div class="upper-block__head">
                     <div class="upper-block__category">
-                        <a href="#" class="upper-block__category-link">Appetizers</a>
+                        <a href="./page-catalog.html" class="upper-block__category-link">Appetizers</a>
                     </div>
-                    <form action="#" class="rate-form">
-                        <div class="rate-form__item">
-                            <div class="rate rate--set">
-                                <div class="rate__body">
-                                    <div class="rate__active"></div>
-                                    <div class="rate__item">
-                                        <input type="radio" class="rate__star" value="1">
-                                        <input type="radio" class="rate__star" value="2">
-                                        <input type="radio" class="rate__star" value="3">
-                                        <input type="radio" class="rate__star" value="4">
-                                        <input type="radio" class="rate__star" value="5">
-                                    </div>
-                                    <div class="rate-value--js">0</div>
-                                </div>
+                    <form action="#" class="rate upper-block__rate">
+                        <div class="rate__wrapper">
+                            <div class="rate__item">
+                                <input class="rate__item-input" type="radio" value="5" name="rate" id="rate__item-5">
+                                <label class="rate__item-label" for="rate__item-5"></label>
+                                <input class="rate__item-input" type="radio" value="4" name="rate" id="rate__item-4">
+                                <label class="rate__item-label" for="rate__item-4"></label>
+                                <input class="rate__item-input" type="radio" value="3" name="rate" id="rate__item-3">
+                                <label class="rate__item-label" for="rate__item-3"></label>
+                                <input class="rate__item-input" type="radio" value="2" name="rate" id="rate__item-2">
+                                <label class="rate__item-label" for="rate__item-2"></label>
+                                <input class="rate__item-input" type="radio" value="1" name="rate" id="rate__item-1">
+                                <label class="rate__item-label" for="rate__item-1"></label>
                             </div>
                         </div>
                         <button type="submit" class="rate-btn">Vote</button>
