@@ -7,7 +7,9 @@
     &__head{
         display: flex;
         justify-content: space-between;
-        padding-bottom: 10px;
+        margin-bottom: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
     &__category-link{
         display: inline-block;
@@ -28,6 +30,8 @@
         font-weight: 800;
         line-height: 1.08696;
         margin-bottom: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 }
 .upper-card{
@@ -152,8 +156,8 @@
 .recipe{
     background-color: #FFF;
     &__main{
-        width: calc(800px * 100% / 1140px);
-        padding-right: 20px;
+        width: calc(750px * 100% / 1140px);
+        margin-right: 20px;
     }
     &__aside{
         width: calc(300px * 100% / 1140px);
@@ -173,7 +177,7 @@
         text-transform: uppercase;
     }
     &__text{
-        margin-bottom: 25px;
+        margin-bottom: 26px;
         &--link{
             color: #FF9614;
             text-decoration-line: underline;
@@ -229,25 +233,21 @@
         border-bottom: 1px #E3E3E3 solid;
         padding-bottom: 6px;
     }
-    &__inner{
-        padding-top: 25px;
-    }
     &__list{
         display: flex;
         flex-wrap: wrap;
-        padding: 0 0 0 30px;
+        row-gap: 20px;
+        padding: 25px 0 0 0;
         margin: 0;
         list-style: none;
-        margin-left: -20px;
     }
     &__item{
-        width: calc(50% - 20px);
+        width: calc(50% - 30px);
         padding-left: 20px;
         background: url(../img/icon-ingridient.svg) no-repeat;
         background-size: 8px 8px;
         background-position: 0 8px;
-        margin-bottom: 20px;
-        margin-left: 20px;
+        margin-left: 30px;
         color: #2F2240;
         font-size: 16px;
         font-style: normal;
@@ -274,7 +274,7 @@
     }
     &__title{
         text-transform: uppercase;
-        margin-bottom: 20px;
+        margin-bottom: 33px;
     }
     &__aside{
         width: calc(300px * 100% / 1140px);
