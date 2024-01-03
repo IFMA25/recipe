@@ -21,6 +21,9 @@
     }
     &__nav-item{
         margin-right: 21px;
+        &:last-child{
+            margin-right: 0;
+        }
     }
     &__nav-link{
         display: block;
