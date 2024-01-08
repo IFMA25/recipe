@@ -175,6 +175,20 @@ passBtn.forEach(function(btn){
         popupClose(popupActive);
     }
 });
+/*------------Search-----------*/
+const search = document.querySelector('.search__mobile');
+const searchHeader = document.querySelector('.header');
+if (search){
+    search.addEventListener("click", function(e){
+        document.body.classList.toggle('header__search--open');
+    });
+    document.addEventListener("click", function(event) {
+        const isClickInsideSearch = search.contains(event.target) || searchHeader.contains(event.target);
+        if (!isClickInsideSearch) {
+            document.body.classList.remove('header__search--open');
+        }
+    });
+}
 
 
 /*-----------SWIPER SLIDER---------------------*/

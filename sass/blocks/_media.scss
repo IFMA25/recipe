@@ -164,6 +164,10 @@
             width: 100%;
         }
     }
+    .upper-block__head, .upper-block__title{
+        padding-left: 0;
+        padding-right: 0;
+    }
     .catalog__aside, .similar__aside{
         margin-bottom: 20px;
     }
