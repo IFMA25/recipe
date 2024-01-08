@@ -818,6 +818,10 @@ template {
   display: none;
 }
 
+.header__search--open .search-form {
+  display: block;
+}
+
 .header__menu-substrate {
   display: none;
   position: fixed;
@@ -2253,6 +2257,12 @@ template {
   }
   .upper-card__inner {
     width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .upper-block__head, .upper-block__title {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 @media (max-width: 768px) {

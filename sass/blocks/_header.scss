@@ -310,6 +310,9 @@
 .header__search--open .search__mobile{
     display: none;
 }
+.header__search--open .search-form {
+    display: block;
+  }
 .header__menu-substrate{
     display: none;
     position: fixed;
