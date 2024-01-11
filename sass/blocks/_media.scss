@@ -47,6 +47,13 @@
         width: 100%;
         padding-right: 0;
     }
+    .article{
+        padding-right: 0;
+    }
+    .article__accent{
+        margin-left: 0;
+        margin-right: 0;
+    }
     .similar__block{
         width: 100%;
     }
@@ -54,10 +61,12 @@
         width: 100%;
         margin-top: 40px;
     }
+    .aside{
+        padding-left: 0;
+    }
     .catalog__aside, .similar__aside, .recipe__aside{
         width: 100%;
         margin-bottom: 40px;
-        margin-left: 0;
     }
 
 }
@@ -75,6 +84,9 @@
     }
     .upper-card__body{
         padding-bottom: 0;
+    }
+    .upper-card__inner{
+        padding: 20px;
     }
 }
 @media (max-width:768px){
@@ -162,6 +174,7 @@
         }
         &__inner{
             width: 100%;
+            padding: 20px 15px;
         }
     }
     .upper-block__head, .upper-block__title{
@@ -170,6 +183,13 @@
     }
     .catalog__aside, .similar__aside{
         margin-bottom: 20px;
+    }
+    .recipe__container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .article ul{
+        padding-left: 0;
     }
 }
 @media (max-width:625px){
@@ -207,9 +227,6 @@
     }
     .recipe-slider__header{
         padding-right: 0;
-    }
-    .ingredients__item{
-        width: 100%;
     }
     .recipe-list{
         display: flex;
@@ -276,6 +293,7 @@
         padding-bottom: 15px;
     }
     .footer{
+        padding-bottom: 20px;
         &__nav-item{
             width: 50%;
             margin-bottom: 10px;
@@ -289,11 +307,29 @@
         width: 40px;
         height: 40px;
     }
+    .upper-block__container{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .article p{
+        margin-bottom: 15px;
+    }
+    .article__accent{
+        padding: 15px 15px 10px 15px;
+        margin-bottom: 20px;
+    }
+    .catalog__aside, .similar__aside, .recipe__aside {
+        margin-bottom: 20px;
+    }
+    .article ul{
+        column-count: 1;
+    }
+    .similar{
+        padding-top: 20px;
+        padding-bottom: 0;
+    }
 }
 @media (max-width:440px){
-    .section-title{
-        font-size: 24px
-    }
     .header{
         &__logo{
             @include adaptiv-value("width", 168, 135, 1);
@@ -324,11 +360,21 @@
     .upper-card__category{
         margin-bottom: 15px;
     }
+    .upper-block__category{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .upper-block__vote{
+        width: 100%;
+    }
     .recipe-list{
         margin-right: 0;
         &__item{
             width: 100%;
         }
+    }
+    .upper-card__demand{
+        justify-content: space-between;
     }
 }
 
@@ -390,7 +436,7 @@
         row-gap: 10px;
         align-items: flex-start;
     }
-    .upper-card__item, .ingredients__item{
+    .upper-card__item{
         font-size: 12px;
     }
 }

@@ -6,7 +6,7 @@
     min-height: 100vh;
     background-color: #fff;
     padding-top: 70px;
-    }
+}
 .container {
     width: 100%;
     max-width: 1170px;
@@ -14,17 +14,10 @@
     margin-left: auto;
     padding-right: 15px;
     padding-left: 15px;
-    }
-.text {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.75;
-    color: $text-color;
 }
 .section-title{
     position: relative;
-    font-size: 26px;
+    @include adaptiv-value('font-size', 26, 22, 1);
     font-style: normal;
     font-weight: 500;
     line-height: 1.15;
@@ -60,4 +53,14 @@
             background: url(../img/tempo-grey.svg) no-repeat;
         }
     }
+}
+.article{
+    color: #2F2240;
+    @include adaptiv-value('font-size', 16, 12, 1);
+    font-weight: 400;
+    line-height: 1.75;
+    padding-right: 30px;
+}
+.aside{
+    padding-left: 40px;
 }
