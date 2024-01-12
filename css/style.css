@@ -1125,9 +1125,6 @@ template {
   position: relative;
   overflow: hidden;
 }
-.slider-main__slide-item-img {
-  overflow: hidden;
-}
 .slider-main__slide-item--1 {
   max-width: 360px;
   max-height: 235px;
@@ -1151,10 +1148,12 @@ template {
 }
 .slider-main__slide-link {
   display: block;
+  height: 100%;
 }
 .slider-main__slide-link .slider-main__slide-img {
   transform: scale(1.1);
   transition: transform 0.5s ease;
+  height: 100%;
 }
 .slider-main__slide-link:hover .slider-main__slide-img {
   transform: scale(1);

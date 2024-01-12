@@ -23,9 +23,6 @@
         &-item{
             position: relative;
             overflow: hidden;
-        &-img{
-            overflow: hidden;
-            }
             &--1{
                 max-width: 360px;
                 max-height: 235px;
@@ -45,9 +42,11 @@
         }
         &-link{
             display: block;
+            height: 100%;
             & .slider-main__slide-img{
                 transform: scale(1.1);
                 transition: transform 0.5s ease;
+                height: 100%;
             }
             &:hover .slider-main__slide-img{
                 transform: scale(1);
