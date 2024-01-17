@@ -1206,7 +1206,6 @@ template {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -2133,6 +2132,9 @@ template {
     width: calc(33.3333333333% - 20px);
     margin-right: 20px;
   }
+  .navigation__item {
+    margin-right: 30px;
+  }
   .recipe-proposition__wrapper {
     width: 100%;
   }
@@ -2172,6 +2174,7 @@ template {
 }
 @media (max-width: 920px) {
   .navigation__list {
+    flex-wrap: wrap;
     row-gap: 20px;
   }
   .navigation__list .navigation__item {
