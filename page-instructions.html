@@ -93,18 +93,16 @@
                     </div>
                     <div class="upper-block__vote">
                         <form action="#" class="rate upper-block__rate">
-                            <div class="rate__item">
-                                <input class="rate__item-input" type="radio" value="5" name="rate" id="rate__item-5">
-                                <label class="rate__item-label" for="rate__item-5"></label>
-                                <input class="rate__item-input" type="radio" value="4" name="rate" id="rate__item-4">
-                                <label class="rate__item-label" for="rate__item-4"></label>
-                                <input class="rate__item-input" type="radio" value="3" name="rate" id="rate__item-3">
-                                <label class="rate__item-label" for="rate__item-3"></label>
-                                <input class="rate__item-input" type="radio" value="2" name="rate" id="rate__item-2">
-                                <label class="rate__item-label" for="rate__item-2"></label>
-                                <input class="rate__item-input" type="radio" value="1" name="rate" id="rate__item-1">
-                                <label class="rate__item-label" for="rate__item-1"></label>
-                            </div>
+                            <input class="rate__input" type="radio" value="5" name="rate" id="rate__5">
+                            <label class="rate__label" for="rate__5"></label>
+                            <input class="rate__input" type="radio" value="4" name="rate" id="rate__4">
+                            <label class="rate__label" for="rate__4"></label>
+                            <input class="rate__input" type="radio" value="3" name="rate" id="rate__3">
+                            <label class="rate__label" for="rate__3"></label>
+                            <input class="rate__input" type="radio" value="2" name="rate" id="rate__2">
+                            <label class="rate__label" for="rate__2"></label>
+                            <input class="rate__input" type="radio" value="1" name="rate" id="rate__1">
+                            <label class="rate__label" for="rate__1"></label>
                         </form>
                         <div class="upper-block__vote-tile">Vote</div>
                     </div>
@@ -156,11 +154,15 @@
                 <main class="main recipe__main">
                     <article class="article recipe__article">
                         <h2>Presentation</h2>
-                        <p>
-                            <img width="50" height="50" src="./img/autor-photo.png" alt="">
-                            <span class="article-text__sml">Recipe by</span>
-                            <span class="article-text__lg">Rosalinda Mariotti</span>
-                        </p>
+                        <div class="author article__author">
+                            <div class="author__photo">
+                                <img width="50" height="50" src="./img/autor-photo.png" alt="author photo">
+                            </div>
+                            <div class="author__inner">
+                                <div class="author__indicat">Recipe by</div>
+                                <div class="author__name">Rosalinda Mariotti</div>
+                            </div>
+                        </div>
                         <p>
                             Eggs Benedict are an all time favorite, especially for brunch, in America. Certain celebrations, such as Mother's day, or Easter, would not be the same without this dish. It can be a little demanding in the preparation, as <a href="#">poached eggs</a> are easy to overcook, but with our instructions you will do just fine. In addition, today we are proposing a new presentation to the classic: passion fruit hollandaise. The traditional recipe uses lemon juice, but passion fruit is as tart, tangy and ends with a sweet tropical note.
                         </p>
@@ -170,26 +172,26 @@
                         <p>
                             Surprise your guests for a summer party, or for a brunch during the holiday season: prepare something unique, fun and delightful such as these eggs Benedict with passion fruit hollandaise!
                         </p>
-                        <div class="article__accent">
-                            <h3>Ingredients</h3>
-                            <ul>
-                                <li>
-                                    <a href="#">Hollandaise Sauce</a> to taste - see recipe below
+                        <div class="ingredients article__ingredients">
+                            <div class="ingredients__title">Ingredients</div>
+                            <ul class="ingredients__list">
+                                <li class="ingredients__item">
+                                    <a href="#" class="ingredients__item-link">Hollandaise Sauce</a> to taste - see recipe below
                                 </li>
-                                <li>
-                                    <a href="#">Eggs</a> 8 - Large
+                                <li class="ingredients__item">
+                                    <a href="#" class="ingredients__item-link">Eggs</a> 8 - Large
                                 </li>
-                                <li>
-                                    <a href="#">Water</a> 6 cups (1500 ml)
+                                <li class="ingredients__item">
+                                    <a href="#" class="ingredients__item-link">Water</a> 6 cups (1500 ml)
                                 </li>
-                                <li>
-                                    <a href="#">Bread</a> 4 brioche buns, or English muffins
+                                <li class="ingredients__item">
+                                    <a href="#" class="ingredients__item-link">Bread</a> 4 brioche buns, or English muffins
                                 </li>
-                                <li>
-                                    <a href="#">Prosciutto crudo</a> 8 slices
+                                <li class="ingredients__item">
+                                    <a href="#" class="ingredients__item-link">Prosciutto crudo</a> 8 slices
                                 </li>
-                                <li>
-                                    <a href="#">White wine vinegar</a> 2 tbsp (20 ml) - 5% acidity
+                                <li class="ingredients__item">
+                                    <a href="#" class="ingredients__item-link">White wine vinegar</a> 2 tbsp (20 ml) - 5% acidity
                                 </li>
                             </ul>
                         </div>

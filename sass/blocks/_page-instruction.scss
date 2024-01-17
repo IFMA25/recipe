@@ -190,26 +190,19 @@
     font-weight: 400;
     line-height: 1.75;
     padding-right: 30px;
-    &__accent{
-        background: #F7F6F8;
-        padding: 30px 30px 20px 30px;
-        margin-bottom: 40px;
-        margin-left: -30px;
-        margin-right: -30px;
-        & h3{
-            position: relative;
-            color: #978FA1;
-            font-size: 14px;
-            font-weight: 600;
-            line-height: 1.28571;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            padding-bottom: 6px;
-            margin: 0;
-            border-bottom: 1px solid #E3E3E3;
-        }
+    & h3{
+        position: relative;
+        color: #978FA1;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.28571;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding-bottom: 6px;
+        margin: 0;
+        border-bottom: 1px solid #E3E3E3;
     }
-        & h2{
+    & h2{
         position: relative;
         color: #2F2240;
         @include adaptiv-value('font-size', 26, 22, 1);
@@ -229,63 +222,16 @@
             border-radius: 2px;
         }
     }
-        & span{
-            display: block;
-        }
-        &-text__sml{
-            color: rgba(48, 33, 67, 0.50);
-            font-size: 11px;
-            font-weight: 600;
-            line-height: 1.454545454545455;
-            padding-top: 6px;
+    & p{
+        margin-bottom: 32px;
     }
-        &-text__lg{
-            color: #4E3969;
-            font-size: 15px;
-            font-weight: 700;
-            line-height: 1.466666666666667;
-    }
-        & img{
-            border-radius: 50%;
-            float: left;
-            margin-right: 12px;
-    }
-        & p{
-            margin-bottom: 32px;
-    }
-        & ul{
-            list-style-image: url(../img/icon-ingridient.svg);
-            column-count: 2;
-            padding: 25px 0 0 25px;
-            margin: 0;
-            color: #2F2240;
-            @include adaptiv-value('font-size', 16, 12, 1);
-            font-weight: 400;
-            line-height: 1.25;
-        }
-        & li{
-            margin-left: 25px;
-            margin-bottom: 20px;
-        }
-        & li a{
-            color: $violet;
-            font-weight: 600;
-            text-decoration-line: underline;
-            &:hover{
-                color: $violet;
-                text-decoration: none;
-            }
-        }
 }
-
-
-/*.author{
+.author{
     display: flex;
     align-items: center;
     margin-bottom: 24px;
-    &__photo{
+    &__photo img{
         border-radius: 50%;
-        overflow: hidden;
     }
     &__inner{
         padding-left: 12px;
@@ -299,11 +245,54 @@
     &__name{
         color: #4E3969;
         font-size: 15px;
-        font-style: normal;
         font-weight: 700;
         line-height: 1.46667;
     }
-}*/
+}
+.ingredients{
+    background: #F7F6F8;
+    padding: 30px 30px 20px 30px;
+    margin-bottom: 40px;
+    margin-left: -30px;
+    margin-right: -30px;
+    &__title{
+        color: #978FA1;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.28571;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border-bottom: 1px #E3E3E3 solid;
+        padding-bottom: 6px;
+    }
+    &__list{
+        column-count: 2;
+        padding: 25px 0 0 25px;
+        margin: 0;
+        list-style: none;
+    }
+    &__item{
+        padding-left: 20px;
+        background: url(../img/icon-ingridient.svg) no-repeat;
+        background-size: 8px 8px;
+        background-position: 0 8px;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        color: #2F2240;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.25;
+        &-link{
+            color: $violet;
+            font-weight: 600;
+            text-decoration: underline;
+            &:hover{
+                color: $violet;
+                text-decoration: none;
+            }
+        }
+    }
+}
 .similar{
     background-color: #F7F6F8;
     padding-top: 40px;
@@ -324,52 +313,50 @@
     }
 }
 .rate{
-        width: 90px;
-        height: 18px;
-        margin-right: 15px;
-    &__item{
-        display: flex;
-        flex-direction: row-reverse;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+    overflow: hidden;
+    width: 90px;
+    height: 18px;
+    margin-right: 15px;
+    &__label{
+        position: relative;
+        flex: 0 0 20%;
         height: 100%;
-        overflow: hidden;
-        &-label{
-            position: relative;
-            flex: 0 0 20%;
-            height: 100%;
-            cursor: pointer;
-            margin: 0;
-            background: url(../img/rate-star.svg);
-            &::before{
-                position: absolute;
-                top: 0;
-                left: 0;
-                content: '';
-                width: 18px;
-                height: 18px;
-                background: url(../img/rate-star-color.svg);
-                opacity: 0;
-                visibility: hidden;
-                transition: opacity 0.4s ease;
-            }
-            &:hover::before,
-            &:hover ~ &::before{
-                opacity: 1;
-                visibility: visible;
-            }
+        cursor: pointer;
+        margin: 0;
+        background: url(../img/rate-star.svg);
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 18px;
+            height: 18px;
+            background: url(../img/rate-star-color.svg);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease;
         }
-        &-input{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0%;
-        height: 0%;
-        opacity: 0;
-        visibility: hidden;
-        &:checked + .rate__item-label::before,
-        &:checked ~ .rate__item-label::before{
+        &:hover::before,
+        &:hover ~ &::before{
             opacity: 1;
             visibility: visible;
-            }
+        }
+    }
+    &__input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    &:checked + .rate__label::before,
+    &:checked ~ .rate__label::before{
+        opacity: 1;
+        visibility: visible;
         }
     }
 }
