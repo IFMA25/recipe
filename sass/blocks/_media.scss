@@ -139,11 +139,9 @@
        }
     .slider-main__slide-item--1, .slider-main__slide-item--2{
         max-width: calc(100% / 2);
-        max-height: auto;
     }
     .slider-main__slide-item--3{
         max-width: calc(100% / 3 - 30px);
-        max-height: auto;
     }
     .slider-main__slide-item--3 .slider-main__slide-text{
         @include adaptiv-value('font-size', 30, 20, 1);

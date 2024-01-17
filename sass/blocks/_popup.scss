@@ -116,10 +116,10 @@
     &__form{
         grid-area: popup__form;
         &-group{
+            position: relative;
             margin-bottom: 22px;
         }
         &-label{
-            position: relative;
             display: block;
             font-size: 12px;
             font-style: normal;

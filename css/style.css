@@ -957,10 +957,10 @@ template {
   grid-area: popup__form;
 }
 .popup__form-group {
+  position: relative;
   margin-bottom: 22px;
 }
 .popup__form-label {
-  position: relative;
   display: block;
   font-size: 12px;
   font-style: normal;
@@ -2241,11 +2241,9 @@ template {
   }
   .slider-main__slide-item--1, .slider-main__slide-item--2 {
     max-width: 50%;
-    max-height: auto;
   }
   .slider-main__slide-item--3 {
     max-width: calc(33.3333333333% - 30px);
-    max-height: auto;
   }
   .slider-main__slide-item--3 .slider-main__slide-text {
     font-size: 30px;

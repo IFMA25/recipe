@@ -28,7 +28,7 @@ const timeout = 500;
 
 
 if (popupLink.length > 0) {
-    for (let index = 0; index < popupLink.length; index++){
+    for (let index = 0; index <popupLink.length; index++){
         const link = popupLink[index];
         link.addEventListener("click", function(e){
             const popupName = link.getAttribute('href').replace('#', '');
@@ -41,7 +41,7 @@ if (popupLink.length > 0) {
 
 let popupCloseIcon = document.querySelectorAll('.popup__close');
 if(popupCloseIcon.length > 0){
-    for (let index = 0; index < popupCloseIcon.length; index++){
+    for (let index = 0; index <popupCloseIcon.length; index++){
         let el = popupCloseIcon[index];
         el.addEventListener("click", function(e){
             popupClose(el.closest('.popup'));
@@ -77,7 +77,7 @@ function popupClose(popupActive, doUnlock = true) {
 const lockPaddingValue = window.innerWidth - document.body.offsetWidth;
 function bodyLock(){
     if (lockPadding.length > 0) {
-        for (let index = 0; index < lockPadding.length; index++) {
+        for (let index = 0; index <lockPadding.length; index++) {
             const el = lockPadding[index];
             const rightPaddingEl = parseInt(window.getComputedStyle(el).getPropertyValue("padding-right")) ;
             el.style.paddingRight = rightPaddingEl + lockPaddingValue +'px';
@@ -93,7 +93,7 @@ function bodyLock(){
 function bodyUnLock() {
     setTimeout(function () {
         if (lockPadding.length > 0) {
-            for (let index = 0; index < lockPadding.length; index++) {
+            for (let index = 0; index <lockPadding.length; index++) {
                 const el = lockPadding[index];
                 el.style.paddingRight = '0px';
             }
