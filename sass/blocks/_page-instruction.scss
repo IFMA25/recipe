@@ -84,6 +84,7 @@
             text-decoration: none;
             padding: 12px 16px;
             background-color: #F6F5F9;
+            transition: background-color 0.4s ease;
             &:hover{
                 color: #000;
                 background-color: #F8EBE0;
@@ -131,11 +132,11 @@
         }
     }
     &__like-btn{
+        display: block;
         width: 36px;
         height: 36px;
         border: none;
         background: url(../img/icon-heart-fav-def.svg) no-repeat;
-        background-position: 50% 50%;
         &.upper-card__like-btn--active{
             background: url(../img/icon-heart-fav-active.svg) no-repeat;
         }
