@@ -9,7 +9,7 @@
     background-color: rgba(78, 57, 105, 0.90);
     overflow-y: auto;
     overflow-x: hidden;
-    transition: opacity .5s ease 0s;
+    transition: opacity .3s ease 0s;
     z-index: 1000;
     &.popup--open{
         opacity: 1;

@@ -831,7 +831,7 @@ template {
   background-color: rgba(78, 57, 105, 0.9);
   overflow-y: auto;
   overflow-x: hidden;
-  transition: opacity 0.5s ease 0s;
+  transition: opacity 0.3s ease 0s;
   z-index: 1000;
 }
 .popup.popup--open {

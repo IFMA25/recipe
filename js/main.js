@@ -24,7 +24,7 @@ const scrollController = {
 const popupLink = document.querySelectorAll('.popup-btn--js');
 const lockPadding = document.querySelectorAll('.header__lock-padding--js');
 let unlock = true;
-const timeout = 500;
+const timeout = 300;
 
 
 if (popupLink.length > 0) {
@@ -80,6 +80,7 @@ function bodyLock(){
         for (let index = 0; index <lockPadding.length; index++) {
             const el = lockPadding[index];
             const rightPaddingEl = parseInt(window.getComputedStyle(el).getPropertyValue("padding-right")) ;
+            console.log(rightPaddingEl);
             el.style.paddingRight = rightPaddingEl + lockPaddingValue +'px';
         }
     }
@@ -118,14 +119,14 @@ const subMenuIcon = document.querySelector('.header__sub-arrow');
     function closeMenu() {
         menuIcon.classList.remove('header__menu--open');
         containerNavigation.classList.remove('header__nav--open');
-        scrollController.enabledScroll();
+        bodyUnLock();
     };
 
     menuIcon.addEventListener('click', function() {
         menuIcon.classList.toggle('header__menu--open');
         containerNavigation.classList.toggle('header__nav--open');
         if (menuIcon.classList.contains('header__menu--open')) {
-            scrollController.disabledScroll();
+            bodyLock();
         } else {
             closeMenu();
         }
