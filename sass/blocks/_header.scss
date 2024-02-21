@@ -59,16 +59,6 @@
                     border-radius: 2px;
                 }
         }
-        &--open{
-            position: absolute;
-            content: '';
-            width: 320px;
-            height: 70px;
-            top: 0;
-            left: -321px;
-            background-color: #fff;
-            transition: transform 0.3s ease;
-        }
     }
     &__nav{
         position: absolute;
@@ -76,7 +66,7 @@
         width: 320px;
         height: 100vh;
         top: 0;
-        left: -321px;
+        left: -320px;
         background-color: #fff;
         z-index: 850;
         transition: transform 0.3s ease;
@@ -201,7 +191,6 @@
         flex-basis: 0;
         flex-grow: 1;
         padding: 0 20px;
-        z-index: 100;
     }
     &__btn{
         display: block;
@@ -245,19 +234,12 @@
 }
 .header__menu--open .header__menu-item{
     top: 50%;
-    left: 25px;
     transform:  rotate(45deg);
     transition: transform 0.6s ease;
-}
-.header__menu--open{
-        transform: translate(100%, 0);
-        overflow-y: auto;
-        transition: transform 0.3s ease;
 }
 .header__nav--open{
     transform: translate(100%, 0);
     overflow-y: auto;
-    transition: transform 0.3s ease;
 }
 .search-form{
     position: relative;
