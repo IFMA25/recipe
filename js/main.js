@@ -111,21 +111,21 @@ function bodyUnLock() {
 
 
 /*----------------MENU------------------------*/
-const menuIcon = document.querySelector('.header__menu');
+const menuIcon = document.querySelector('.header__menu-btn');
 const containerNavigation = document.querySelector('.menu__bar');
 const subMenu = document.querySelector('.menu__sub-nav');
 const subMenuIcon = document.querySelector('.menu__sub-arrow');
 const menuIconClose = document.querySelector('.menu__bar-close');
 
     function closeMenu() {
-        menuIcon.classList.remove('header__menu--open');
+        menuIcon.classList.remove('header__menu-btn--active');
         containerNavigation.classList.remove('menu__bar--open');
         bodyUnLock();
     };
     menuIcon.addEventListener('click', function() {
-        menuIcon.classList.toggle('header__menu--open');
+        menuIcon.classList.toggle('header__menu-btn--active');
         containerNavigation.classList.toggle('menu__bar--open');
-        if (menuIcon.classList.contains('header__menu--open')) {
+        if (menuIcon.classList.contains('header__menu-btn--active')) {
             bodyLock();
         } else {
             closeMenu();
@@ -141,7 +141,7 @@ const menuIconClose = document.querySelector('.menu__bar-close');
     });
 
     document.addEventListener('click', function(event) {
-        const isMenuOpen = menuIcon.classList.contains('header__menu--open');
+        const isMenuOpen = menuIcon.classList.contains('header__menu-btn--active');
         const isClickInsideMenu = containerNavigation.contains(event.target) || menuIcon.contains(event.target);
         if (isMenuOpen && !isClickInsideMenu) {
             closeMenu();
