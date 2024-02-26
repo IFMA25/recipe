@@ -11,80 +11,87 @@
 <body>
     <div class="wrapper">
         <header class="header header__lock-padding--js">
-           <div class="header__container">
-            <div class="header__inner">
-                <div class="header__menu">
-                    <span class="header__menu-item"></span>
+            <div class="header__container">
+                <div class="header__inner">
+                    <div class="header__menu">
+                        <span class="header__menu-item"></span>
+                    </div>
+                    <div class="header__logo">
+                        <a href="./index.html" class="header__logo-link">
+                            <img width="168" height="44" src="./img/logo.svg" alt="">
+                        </a>
+                    </div>
                 </div>
-                <div class="header__menu-substrate"></div>
-                <nav class="header__nav">
-                    <ul class="header__nav-list">
-                            <li class="header__nav-item">
-                                <a href="./index.html" class="header__nav-link">
-                                    <span class="header__nav-icon header__nav-icon--home"></span>
-                                    Home
-                                </a>
-                            </li>
-                            <li class="header__nav-item header__sub-nav">
-                                <a href="./index.html" class="header__nav-link">
-                                    <span class="header__nav-icon header__nav-icon--arrow"></span>
-                                    Recipes
-                                </a>
-                                <button class="header__sub-arrow"></button>
-                                <ul class="header__sub-list">
-                                    <li class="header__sub-item">
-                                        <a class="header__sub-link" href="./page-category.html">Appetizers</a>
-                                    </li>
-                                    <li class="header__sub-item">
-                                        <a class="header__sub-link" href="#">First Courses</a>
-                                    </li>
-                                    <li class="header__sub-item">
-                                        <a class="header__sub-link" href="#">Main Courses</a>
-                                    </li>
-                                    <li class="header__sub-item">
-                                        <a class="header__sub-link" href="#">Desserts</a>
-                                    </li>
-                                    <li class="header__sub-item">
-                                        <a class="header__sub-link" href="#">Leavened Products</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="header__nav-item">
-                                <a href="./index.html" class="header__nav-link">
-                                    <span class="header__nav-icon header__nav-icon--clocke"></span>
-                                    Latest Recipes
-                                </a>
-                            </li>
-                            <li class="header__nav-item">
-                                <a href="./index.html" class="header__nav-link">
-                                    <span class="header__nav-icon header__nav-icon--arrow"></span>
-                                    IT Website
-                                </a>
-                            </li>
-                    </ul>
-                </nav>
-                <div class="header__logo">
-                    <a href="./index.html" class="header__logo-link">
-                        <img width="168" height="44" src="./img/logo.svg" alt="">
+                <div class="header__search">
+                    <form class="search-form">
+                        <input type="text" class="search-form__item" value placeholder="Search for a recipe">
+                        <input type="submit" value class="search-form__submit">
+                    </form>
+                </div>
+                <div class="search__mobile">
+                    <button class="search__mobile-btn"></button>
+                </div>
+                <div class="header__sign-in">
+                    <a class="header__btn popup-btn--js" href="#popup-login">
+                        <span class="header__btn-name">Sign in</span>
                     </a>
                 </div>
             </div>
-            <div class="header__search">
-                <form class="search-form">
-                    <input type="text" class="search-form__item" value placeholder="Search for a recipe">
-                    <input type="submit" value class="search-form__submit">
-                </form>
-            </div>
-            <div class="search__mobile">
-                <button class="search__mobile-btn"></button>
-            </div>
-            <div class="header__sign-in">
-                <a class="header__btn popup-btn--js" href="#popup-login">
-                    <span class="header__btn-name">Sign in</span>
-                </a>
-            </div>
-           </div>
         </header>
+        <div class="menu__bar">
+            <div class="menu__bar-head">
+                <div class="menu__bar-close">
+                    <span class="menu__bar-close-item"></span>
+                </div>
+            </div>
+            <nav class="menu__nav">
+                <ul class="menu__nav-list">
+                    <li class="menu__nav-item">
+                        <a href="./index.html" class="menu__nav-link">
+                            <span class="menu__nav-icon menu__nav-icon--home"></span>
+                            Home
+                        </a>
+                    </li>
+                    <li class="menu__nav-item menu__sub-nav">
+                        <a href="./index.html" class="menu__nav-link">
+                            <span class="menu__nav-icon menu__nav-icon--arrow"></span>
+                            Recipes
+                        </a>
+                        <button class="menu__sub-arrow"></button>
+                        <ul class="menu__sub-list">
+                            <li class="menu__sub-item">
+                                <a class="menu__sub-link" href="./page-catalog.html">Appetizers</a>
+                            </li>
+                            <li class="menu__sub-item">
+                                <a class="menu__sub-link" href="#">First Courses</a>
+                            </li>
+                            <li class="menu__sub-item">
+                                <a class="menu__sub-link" href="#">Main Courses</a>
+                            </li>
+                            <li class="menu__sub-item">
+                                <a class="menu__sub-link" href="#">Desserts</a>
+                            </li>
+                            <li class="menu__sub-item">
+                                <a class="menu__sub-link" href="#">Leavened Products</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__nav-item">
+                        <a href="./index.html" class="menu__nav-link">
+                            <span class="menu__nav-icon menu__nav-icon--clocke"></span>
+                            Latest Recipes
+                        </a>
+                    </li>
+                    <li class="menu__nav-item">
+                        <a href="./index.html" class="menu__nav-link">
+                            <span class="menu__nav-icon menu__nav-icon--arrow"></span>
+                            IT Website
+                        </a>
+                    </li>
+            </ul>
+            </nav>
+        </div>
+        <div class="substrate"></div>
         <div class="catalog">
             <div class="container catalog__container">
                 <main class="main catalog__main">

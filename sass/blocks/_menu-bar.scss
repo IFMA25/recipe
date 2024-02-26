@@ -1,0 +1,176 @@
+.menu{
+    &__bar{
+        position: fixed;
+        width: 320px;
+        height: 100vh;
+        top: 0;
+        left: -320px;
+        background-color: #fff;
+        z-index: 1100;
+        transition: transform 0.3s ease;
+        &-head{
+            padding: 10px;
+            border-bottom: 1px rgba(78, 57, 105, 0.15) solid;
+        }
+        &-close{
+            display: block;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            &-item{
+                position: absolute;
+                content: '';
+                width: 30px;
+                height: 2px;
+                background-color: #000;
+                top: 50%;
+                left: 10px;
+                border-radius: 2px;
+                transform:  rotate(45deg);
+                &::before{
+                    position: absolute;
+                    content: '';
+                    width: 30px;
+                    height: 2px;
+                    background-color: #000;
+                    top: 0;
+                    left: 0;
+                    border-radius: 2px;
+                    transform:  rotate(90deg);
+                }
+            }
+        }
+    }
+    &__nav-list{
+        padding: 0;
+        margin: 0;
+    }
+    &__nav-item{
+        position: relative;
+        list-style: none;
+        border-bottom: 1px rgba(78, 57, 105, 0.15) solid;
+        transition: all 0.3s ease;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        padding-left: 40px;
+        padding-right: 50px;
+        &:hover{
+            background-color: $body-bg;
+        }
+    }
+    &__nav-link{
+        display: inline-block;
+        width: 100%;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.428571428571429;
+        color: $violet;
+        padding-left: 25px;
+        &:hover{
+            color: $violet;
+        }
+    }
+    &__nav-icon{
+        &::before{
+            position: absolute;
+            display: block;
+            width: 34px;
+            height: 34px;
+            top: 10px;
+            bottom: 10px;
+            left: 25px;
+            content: '';
+        }
+        &--home::before{
+            background: url(../img/icon-home.svg) no-repeat;
+        }
+        &--arrow::before{
+            background: url(../img/icon-other.svg) no-repeat;
+        }
+        &--clocke::before{
+            background: url(../img/icon-ultime.svg) no-repeat;
+        }
+    }
+    &__sub-nav{
+        position: relative;
+        &--close .menu__sub-list{
+            display: none;
+        }
+        &--close .menu__sub-arrow--close{
+            transform: rotate(180deg);
+            transition: transform 0.2s ease;
+        }
+    }
+    &__sub-arrow{
+        position: absolute;
+        content: '';
+        width: 50px;
+        height: 50px;
+        right: 0;
+        top: 0;
+        border: none;
+        background-color: transparent;
+        padding: 10px;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-top: 2px $violet solid;
+            border-right: 2px $violet solid;
+            border-radius: 2px;
+            transform: rotate(-45deg);
+            top: calc(50% - 4px);
+            right: calc(50% - 4px);
+        }
+    }
+    &__sub-list{
+        padding-left: 20px;
+        padding-right: 20px;
+        border-left: 2px $orange solid;
+        border-radius: 1px;
+        margin-top: 10px;
+    }
+    &__sub-item{
+        list-style: none;
+        margin-bottom: 14px;
+        line-height: 1;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &:hover .menu__sub-link{
+            color: $orange;
+        }
+    }
+    &__sub-link{
+        display: inline-block;
+        width: 100%;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.428571428571429;
+        color: $violet;
+    }
+}
+.menu__bar--open{
+    transform: translate(100%, 0);
+    overflow-y: auto;
+}
+.substrate{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(78, 57, 105, 0.9);
+    z-index: 1050;
+}
+.menu__bar--open ~ .substrate{
+    display: block;
+}
