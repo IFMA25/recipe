@@ -1,0 +1,113 @@
+.recipe-main{
+    background-color: #F7F6F8;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+.recipe-proposition{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    &__title{
+        width: 100%;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        &-link{
+            position: relative;
+            display: inline-block;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 1.272727272727273;
+            color: $violet;
+            text-decoration: none;
+            &::before{
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: $violet;
+            }
+            &:hover{
+                color: $violet;
+                &.recipe-proposition__title-link::before{
+                width: 100%;
+                transition: width 0.3s ease;
+            }
+        }
+        }
+    }
+    &__wrapper{
+        width: calc(800px * 100% / 1140px);
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__inner{
+        width: calc(100% / 3);
+        padding-right: 20px;
+    }
+    &__title-list{
+        margin-bottom: 14px;
+    }
+    &__list{
+        padding: 0;
+        margin: 0;
+    }
+    &__item{
+        list-style: none;
+        margin-bottom: 10px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__link{
+        display: block;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.333333333333333;
+        color: $violet;
+        text-decoration: none;
+        &:hover{
+            color: $orange;
+            transition: color 0.3s ease;
+        }
+    }
+    &__aside{
+        width: calc(340px * 100% / 1140px);
+    }
+}
+.recipe-block{
+    padding-bottom: 30px;
+    &__container{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        margin-right: -28px;
+    }
+    &__header{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title{
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        padding-right: 100px;
+        padding-top: 10px;
+    }
+}
+.recipe-slider{
+    padding-bottom: 30px;
+    &__title {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        padding-top: 10px;
+    }
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        padding-right: 130px;
+    }
+}

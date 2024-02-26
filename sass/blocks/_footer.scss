@@ -1,0 +1,40 @@
+.footer{
+    padding-bottom: 30px;
+    background-color: $body-bg;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px #E6E6E6 solid;
+        padding-top: 30px;
+    }
+    &__brend{
+        color: #7A6D8A;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+    &__nav-list{
+        list-style: none;
+        display: flex;
+        margin: 0;
+    }
+    &__nav-item{
+        margin-right: 21px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &__nav-link{
+        display: block;
+        color: #978FA1;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.5; 
+        text-decoration-line: underline;
+        &:hover{
+            color: #978FA1;
+            text-decoration-line: none;
+        }
+    }
+}

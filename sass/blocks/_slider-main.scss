@@ -1,0 +1,93 @@
+.slider-main{
+        position: relative;
+        width: 100%;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        background-color: #FFF;
+    &__wrapper{
+        width: 100%;
+        overflow: hidden;
+
+    }
+    &__small-slide{
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        column-gap: 30px;
+    }
+    &__slide{
+        max-width: 1137px;
+        height: auto;
+        display: flex;
+        column-gap: 30px;
+        &-item{
+            position: relative;
+            overflow: hidden;
+            &--1{
+                max-width: 360px;
+                max-height: 235px;
+            }
+            &--2{
+                max-width: 360px;
+                max-height: 235px;
+            }
+            &--3{
+                max-width: 750px;
+                max-height: 500px;
+                & .slider-main__slide-text{
+                    @include adaptiv-value('font-size', 44, 20, 1);
+                    line-height: 1.136363636363636;
+                }
+            }
+        }
+        &-link{
+            display: block;
+            height: 100%;
+            & .slider-main__slide-img{
+                transform: scale(1.1);
+                transition: transform 0.5s ease;
+                height: 100%;
+            }
+            &:hover .slider-main__slide-img{
+                transform: scale(1);
+            }
+        }
+        &-text{
+            position: absolute;
+            content: '';
+            height: auto;
+            bottom: 20px;
+            left: 25px;
+            right: 15px;
+            color: #FFF;
+            @include adaptiv-value('font-size', 30, 20, 1);
+            font-style: normal;
+            font-weight: 800;
+            line-height: 1;
+            margin: 0;
+        }
+
+    }
+    &__arrow{
+        top: calc(50% - 20px);
+        width: 40px;
+        height: 40px;
+        content: '';
+        border: none;
+        background-color: rgba(233, 229, 238, 0.70);
+        font-size: 0;
+        border-radius: 50%;
+        margin: 0;
+        &:hover{
+            background-color: rgba(233, 229, 238, 1);
+            transition: background-color 0.3s ease;
+        }
+    }
+}
+.swiper-button-next::after, .swiper-button-prev::after{
+    color: #000;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+

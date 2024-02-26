@@ -1,36 +1,59 @@
-.body--lock{
-    overflow: hidden;
-// for ios
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    top: 0;
-    left: 0;
+.body{
+    position: relative;
 }
 .wrapper {
     overflow: hidden;
     min-height: 100vh;
-    background-color: $body-bg;
-    }
+    background-color: #fff;
+    padding-top: 70px;
+}
 .container {
     width: 100%;
-    max-width: 1960px;
+    max-width: 1170px;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 30px;
-    padding-left: 30px;
-    }
-.text {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.75;
-    color: $text-color;
+    padding-right: 15px;
+    padding-left: 15px;
 }
-.title{
-    font-size: 26px;
+.section-title{
+    position: relative;
+    @include adaptiv-value('font-size', 26, 22, 1);
     font-style: normal;
     font-weight: 500;
     line-height: 1.15;
     color: $text-color;
+    padding-bottom: 10px;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 3px;
+            background-color: $orange;
+            bottom: 0;
+            left: 0;
+            border-radius: 2px;
+        }
+}
+.recipe-info{
+    display: flex;
+    &__icon{
+        color: #978FA1;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.5;
+        padding-left: 23px;
+        margin-right: 17px;
+        &:last-child{
+            margin-right: 0;
+        }
+        &--cap{
+            background: url(../img/difficolta-grey.svg) no-repeat;
+        }
+        &--time{
+            background: url(../img/tempo-grey.svg) no-repeat;
+        }
+    }
+}
+.aside{
+    padding-left: 40px;
 }
